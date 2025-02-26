@@ -1,0 +1,1 @@
+This repository contains the first lesson from the Fullstack Web Development AI Cohort by Sheryians Coding School. It covers the basics of HTML, including understanding tags and structure. As part of the lesson, a simple blog post was created using only HTML.
