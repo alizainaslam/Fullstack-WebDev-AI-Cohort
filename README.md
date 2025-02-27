@@ -1,6 +1,6 @@
 # Fullstack Web Development AI Cohort – Sheryians Coding School
 
-This repository contains exercises, assignments, and projects from the **Fullstack Web Development AI Cohort** by **Sheryians Coding School**. It covers full-stack development concepts, including the **MERN Stack, DevOps, and AI integrations**.
+This repository contains exercises, assignments, and projects from the **Fullstack Web Development AI Cohort** by **Sheryians Coding School**. It covers full-stack development concepts, including the **MERN Stack, DevOps, and Generative AI**.
 
 ## Course Link
 
