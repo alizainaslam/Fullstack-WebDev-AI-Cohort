@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #111111dd;
+  background-color: #fff;
+}
+
+html {
+  font-size: 1rem;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+header {
+  margin: 50px 0;
+}
+
+h3 {
+  font-size: medium;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+img {
+  height: 300px;
+  width: 250px;
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  margin: 30px;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 25px;
+  text-align: center;
+}
+
+.card-item {
+  border: 1px solid rgba(128, 128, 128, 0.216);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.071);
+}
+
+.card-label {
+  padding: 15px 0px 5px 0px;
+}
+
+.card-description {
+  padding-bottom: 5px;
+}
+.price {
+  font-weight: bold;
+}
+
+footer {
+  border-top: 0.5px solid gainsboro;
+  line-height: 80px;
+  margin: 30px;
+}
+footer p {
+  opacity: 0.9;
+}
+/* Responsive */
+@media (min-width: 768px) {
+  .product-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
