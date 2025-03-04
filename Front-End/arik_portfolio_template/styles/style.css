@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: rgb(14, 14, 14);
+  color: #f5deb3;
+}
+
+html {
+  font-size: clamp(16px, 1vw, 20px);
+}
+
+.hero-section {
+  width: 100%;
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.hero-section img {
+  width: 65%;
+  margin-top: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.1;
+}
+.hero-section p {
+  font-size: 1rem;
+  opacity: 0.7;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  text-align: center;
+  font-weight: 200;
+  padding-top: 15px;
+}
+.hero-section p br {
+  display: none;
+}
+
+.services-tag {
+  padding: 0px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 50px 0px;
+}
+.services-tag img {
+  height: 30px;
+  border: 1px solid #f5deb3;
+  padding: 5px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.services-tag p {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  opacity: 0.7;
+}
+
+.marquee-section {
+  padding: 0px 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.marquee-section .logos {
+  display: flex;
+  width: 40%;
+  overflow: hidden;
+}
+.marquee-section .logos .text {
+  display: flex;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 768px) {
+  .hero-section img {
+    width: 50%;
+  }
+  .hero-section h1 {
+    font-size: 7rem;
+  }
+  .hero-section p {
+    font-size: 1.3rem;
+  }
+  .hero-section p br {
+    display: block;
+  }
+}
+@media (min-width: 1020px) {
+  .hero-section img {
+    width: 34%;
+  }
+  .hero-section h1 {
+    font-size: 8rem;
+  }
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
