@@ -61,7 +61,10 @@ html {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  margin: 50px 0px;
+  margin: 50px auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 .services-tag img {
   height: 30px;
@@ -83,16 +86,42 @@ html {
   display: flex;
   justify-content: center;
 }
-.marquee-section .logos {
+.marquee-section .marquee {
   display: flex;
-  width: 40%;
+  width: 100%;
   overflow: hidden;
+  position: relative;
 }
-.marquee-section .logos .text {
+.marquee-section .marquee::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(14, 14, 14), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.marquee-section .marquee::before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to right, transparent, rgb(14, 14, 14));
+  z-index: 10;
+}
+.marquee-section .marquee .text {
   display: flex;
   gap: 3rem;
   padding: 0 1.5rem;
   animation: marquee 10s linear infinite both;
+}
+.marquee-section .marquee .text p {
+  font-size: 1.2rem;
+  letter-spacing: 1.8px;
+  font-weight: 200;
 }
 
 @keyframes marquee {
@@ -126,5 +155,15 @@ html {
   }
   .hero-section p {
     font-size: 1.5rem;
+  }
+  .marquee-section .marquee {
+    width: 50%;
+  }
+  .marquee-section .marquee::after {
+    content: "";
+    width: 20%;
+  }
+  .marquee-section .marquee::before {
+    width: 20%;
   }
 }/*# sourceMappingURL=style.css.map */

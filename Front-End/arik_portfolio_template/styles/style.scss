@@ -69,7 +69,9 @@ html {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  margin: 50px 0px;
+  margin: 50px auto;
+  width: fit-content;
+  cursor: pointer;
   img {
     height: 30px;
     border: 1px solid $text-color;
@@ -90,16 +92,42 @@ html {
   display: flex;
   justify-content: center;
 
-  .logos {
+  .marquee {
     display: flex;
-    width: 40%;
+    width: 100%;
     overflow: hidden;
-
+    position: relative;
+    &::after {
+      content: "";
+      width: 20%;
+      height: 100%;
+      background-image: linear-gradient(to right, $bg-color, transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    &::before {
+      content: "";
+      width: 20%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: linear-gradient(to right, transparent, $bg-color);
+      z-index: 10;
+    }
     .text {
       display: flex;
       gap: 3rem;
       padding: 0 1.5rem;
       animation: marquee 10s linear infinite both;
+
+      p {
+        font-size: 1.2rem;
+        letter-spacing: 1.8px;
+        font-weight: 200;
+      }
     }
   }
 }
@@ -139,6 +167,19 @@ html {
     }
     p {
       font-size: 1.5rem;
+    }
+  }
+
+  .marquee-section {
+    .marquee {
+      width: 50%;
+      &::after {
+        content: "";
+        width: 20%;
+      }
+      &::before {
+        width: 20%;
+      }
     }
   }
 }
