@@ -46,6 +46,11 @@ p {
   opacity: 0.8;
 }
 
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 3rem;
   font-weight: 300;
@@ -203,10 +208,6 @@ h4 {
   gap: 1rem;
   margin-bottom: 2rem;
 }
-.works-section .heading h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
-}
 .works-section .work-items {
   display: grid;
   gap: 2rem;
@@ -253,6 +254,89 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.process-section .process-heading p br {
+  display: none;
+}
+.process-section .process-items {
+  display: grid;
+  grid-template-columns: 0.5fr 6fr;
+  gap: 1rem;
+}
+.process-section .process-items .lines {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+}
+.process-section .process-items .lines .sm-line {
+  width: 0.5px;
+  height: 15rem;
+  background-color: #f5deb3;
+}
+.process-section .process-items .lines .count {
+  border: 0.5px solid #f5deb3;
+  padding: 0.44rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+.process-section .process-items .lines .lg-line {
+  width: 0.5px;
+  height: 100%;
+  background-color: #f5deb3;
+}
+.process-section .process-items .process-card-item {
+  margin-top: 6.6rem;
+  display: grid;
+  gap: 2rem;
+}
+.process-section .process-items .process-card-item .process-card {
+  background-color: #343330;
+  background-color: hsl(30, 4%, 9%);
+  border: 0.5px solid #343330;
+  border-radius: 1px;
+  padding: 2rem;
+}
+.process-section .process-items .process-card-item .process-card .time {
+  margin-top: 0px;
+  background-color: rgb(14, 14, 14);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  border: 0.5px solid #343330;
+  border-radius: 1px;
+  font-size: 0.6rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.process-section .process-items .process-card-item .process-card h4 {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  line-height: 2;
+}
+.process-section .process-items .process-card-item .process-card h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.process-section .process-items .process-card-item .process-card ul {
+  margin-top: 1rem;
+}
+.process-section .process-items .process-card-item .process-card ul li {
+  padding: 0.3rem 0;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin-left: 0.8rem;
+  line-height: 1.5;
+  font-weight: 200;
+}
+.process-section .process-items .right {
+  display: none;
 }
 
 .testimonial-section {
@@ -377,6 +461,35 @@ footer .copy-rights {
   }
   .process-section .process-heading p {
     font-size: 1.2rem;
+  }
+  .process-section .process-heading p br {
+    display: block;
+  }
+  .process-section .process-items {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    grid-template-columns: 6fr 0.5fr 6fr;
+    grid-template-areas: "left lines right";
+  }
+  .process-section .process-items .left {
+    grid-area: left;
+  }
+  .process-section .process-items .lines {
+    grid-area: lines;
+  }
+  .process-section .process-items .right {
+    grid-area: right;
+  }
+  .process-section .process-items .right {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .process-section .process-items .lg-hide {
+    opacity: 0;
   }
   .testimonial-section .heading p br {
     display: block;
