@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio / TailwindCss</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header
+      class="w-full flex justify-between items-center px-10 py-5 md:px-15"
+    >
+      <div class="logo text-xl font-medium tracking-tighter">
+        <h3>Portfolio</h3>
+      </div>
+      <nav>
+        <div class="navItems font-medium tracking-tight hidden md:block">
+          <a href="">Home</a>
+          <a class="text-zinc-400" href="">Socials</a>
+          <a class="text-zinc-400" href="">Projects</a>
+          <a class="text-zinc-400" href="">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-full mx-auto">
+      <section class="heroSection w-full px-10 md:px-15 py-10 flex flex-col">
+        <h4 class="text-lg md:text-2xl tracking-tighter font-bold">
+          Hello, I am
+        </h4>
+        <div
+          class="bottomContent flex justify-between -mt-2 md:-mt-4 items-center"
+        >
+          <h1 class="text-4xl md:text-8xl tracking-tighter font-bold">Zain.</h1>
+          <div class="rightContent flex gap-1 items-center">
+            <p class="text-zinc-400 tracking-tighter text-xs md:text-xl">
+              [ 08:50 AM ]
+            </p>
+            <div class="line w-10 md:w-20 h-[0.9px] bg-zinc-400"></div>
+            <p class="tracking-tighter font-medium text-xs md:text-xl">
+              Creative Front End Developer
+            </p>
+          </div>
+        </div>
+        <img
+          class="heroPicutre w-full h-60 md:h-110 my-1 object-cover object-[0%_10%]"
+          src="https://images.unsplash.com/photo-1741412252409-44be651925aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </section>
+
+      <section
+        class="aboutSection md:w-[65%] mt-10 px-10 py-5 my-0 mx-auto relative"
+      >
+        <img
+          class="h-10 w-10 absolute rotate-20 -top-5 md:top-0"
+          src="assets/vscode.svg"
+          alt="vscode"
+        />
+        <img
+          class="h-10 w-10 absolute right-10 rotate-10 -top-5 md:top-0"
+          src="assets/html.svg"
+          alt="html"
+        />
+        <img
+          class="h-10 w-10 absolute md:left-50 -bottom-10 -rotate-30"
+          src="assets/css.svg"
+          alt="css"
+        />
+        <img
+          class="h-10 w-10 absolute right-10 md:right-50 -bottom-10 rotate-20"
+          src="assets/js.svg"
+          alt="js"
+        />
+        <div class="content flex flex-col justify-center items-center gap-4">
+          <h2 class="font-bold tracking-tighter text-xl md:text-3xl">
+            [ I design & build experiences ]
+          </h2>
+          <p
+            class="text-center tracking-tight font-medium opacity-90 text-sm md:text-lg"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+            exercitationem veniam nihil ex esse totam esse quas! molestiae ea
+            esse facere eligendi magni placeat officiis expedita, nulla, culpa
+            quasi quae. molestiae ea esse facere eligendi magni placeat officiis
+            molestiae ea esse facere eligendi magni placeat expedita,
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="theBeginning w-full mt-20 h-auto px-10 md:px-15 py-10 relative"
+      >
+        <div class="heading flex items-center gap-4 sticky top-0 bg-white py-5">
+          <p class="tracking-tighter font-medium text-xl md:text-3xl">2017.</p>
+          <div class="line w-20 h-[0.9px] bg-zinc-400"></div>
+          <h2
+            class="text-zinc-400 tracking-tighter text-xl md:text-3xl font-medium"
+          >
+            The Beginning
+          </h2>
+        </div>
+
+        <div class="cardItems flex gap-4 md:gap-10 w-full mt-5">
+          <div class="leftCards flex flex-col gap-4 md:gap-10 w-[33%]">
+            <div class="card-1 bg-gray-200 h-40 md:h-120 w-full"></div>
+            <div class="card-1 bg-gray-200 h-60 md:h-90 w-full"></div>
+          </div>
+          <div class="centerCards flex flex-col gap-4 md:gap-10 w-[33%] mt-5">
+            <div class="card-1 bg-gray-200 h-60 md:h-120 w-full"></div>
+            <div class="card-1 bg-gray-200 h-40 md:h-80 w-full"></div>
+          </div>
+          <div class="rightCards flex flex-col gap-4 md:gap-10 w-[33%] mt-3">
+            <div class="card-1 bg-gray-200 h-40 md:h-80 w-full"></div>
+            <div class="card-1 bg-gray-200 h-40 md:h-120 w-full"></div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="escalation w-full mt-10 h-auto px-10 md:px-15 py-10 relative"
+      >
+        <div class="heading flex items-center gap-4 sticky top-0 bg-white py-5">
+          <p class="tracking-tighter font-medium text-xl md:text-3xl">2018.</p>
+          <div class="line w-20 h-[0.9px] bg-zinc-400"></div>
+          <h2
+            class="text-zinc-400 tracking-tighter text-xl md:text-3xl font-medium"
+          >
+            Escalation
+          </h2>
+        </div>
+
+        <div class="cardItems flex gap-4 md:gap-10 w-full mt-5">
+          <div class="leftCards flex flex-col gap-4 md:gap-10 w-[33%]">
+            <div class="card-1 bg-gray-200 h-40 md:h-120 w-full"></div>
+            <div class="card-1 bg-gray-200 h-60 md:h-90 w-full"></div>
+          </div>
+          <div class="centerCards flex flex-col gap-4 md:gap-10 w-[33%] mt-5">
+            <div class="card-1 bg-gray-200 h-60 md:h-120 w-full"></div>
+            <div class="card-1 bg-gray-200 h-40 md:h-80 w-full"></div>
+          </div>
+          <div class="rightCards flex flex-col gap-4 md:gap-10 w-[33%] mt-3">
+            <div class="card-1 bg-gray-200 h-40 md:h-80 w-full"></div>
+            <div class="card-1 bg-gray-200 h-40 md:h-120 w-full"></div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="skillShow md:w-[65%] mt-10 px-10 mx-auto md:px-15 py-10 text-center"
+      >
+        <h4
+          class="heading text-xl md:text-2xl font-medium tracking-tighter pb-4"
+        >
+          I am great at
+        </h4>
+        <div class="images flex gap-3 justify-center flex-wrap">
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/vscode.svg"
+            alt="vscode.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/js.svg"
+            alt="js.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/vscode.svg"
+            alt="vscode.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/css.svg"
+            alt="css.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/vscode.svg"
+            alt="vscode.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/css.svg"
+            alt="css.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/css.svg"
+            alt="css.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/js.svg"
+            alt="js.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/vscode.svg"
+            alt="vscode.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/js.svg"
+            alt="js.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/vscode.svg"
+            alt="vscode.svg"
+          />
+          <img
+            class="h-7 w-7 md:h-10 md:w-10"
+            src="assets/html.svg"
+            alt="html"
+          />
+        </div>
+      </section>
+
+      <section class="testimonial w-full mt-10 px-10 mx-auto md:px-15 py-10">
+        <div class="heading">
+          <p class="tracking-tighter font-medium text-2xl md:text-3xl">
+            Client.
+          </p>
+          <div class="bottomHeading -mt-6 md:-mt-4">
+            <h1
+              class="text-2xl md:text-5xl tracking-tighter font-bold flex items-center justify-between"
+            >
+              Testimonial
+              <span>
+                <img class="h-20 md:pt-5" src="assets/arrow.svg" alt="arrow" />
+              </span>
+              works
+            </h1>
+          </div>
+        </div>
+        <div class="projectCards mt-5">
+          <div class="project-1">
+            <div class="heading">
+              <h3 class="tracking-tighter font-medium text-xl md:text-2xl">
+                Britannia
+              </h3>
+              <p
+                class="text-sm md:text-lg tracking-tighter font-base flex items-center -mt-3 md:-mt-2"
+              >
+                2017
+                <span>
+                  <img class="h-10 pt-1" src="assets/arrow.svg" alt="arrow" />
+                </span>
+                Mumbai
+              </p>
+            </div>
+            <img
+              class="h-50 md:h-80 w-full object-cover object-[0%_15%]"
+              src="https://images.unsplash.com/photo-1734712877274-3d208002c64d?q=80&w=2112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="bottomProjects mt-7 flex gap-8 md:gap-20">
+            <div class="project-2 flex-1">
+              <div class="heading">
+                <h3 class="tracking-tighter font-medium text-xl md:text-2xl">
+                  Orange Splash
+                </h3>
+                <p
+                  class="text-sm md:text-lg tracking-tighter font-base flex items-center -mt-3 md:-mt-2"
+                >
+                  2022
+                  <span>
+                    <img class="h-10 pt-1" src="assets/arrow.svg" alt="arrow" />
+                  </span>
+                  Milan
+                </p>
+              </div>
+              <img
+                class="h-50 md:h-90 w-full object-cover object-[20%_0%]"
+                src="https://images.unsplash.com/photo-1499088513455-78ed88b7a5b4?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+            <div class="project-3 mt-15 flex-2">
+              <div class="heading">
+                <h3 class="tracking-tighter font-medium text-xl md:text-2xl">
+                  Palm Jumerah
+                </h3>
+                <p
+                  class="text-sm md:text-lg tracking-tighter font-base flex items-center -mt-3 md:-mt-2"
+                >
+                  2025
+                  <span>
+                    <img class="h-10 pt-1" src="assets/arrow.svg" alt="arrow" />
+                  </span>
+                  Paris
+                </p>
+              </div>
+              <img
+                class="h-50 md:h-90 w-full object-cover object-top"
+                src="https://plus.unsplash.com/premium_photo-1681346660261-76183dce9807?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="footer mt-10 px-10 mx-auto md:px-15 py-10 flex justify-between items-center"
+    >
+      <p class="text-xs md:text-sm">
+        <span class="font-medium">Ali</span> Zain Aslam
+      </p>
+      <p class="text-xs md:text-sm font-medium">03 Mar. 2025 [ 10:37 PM ]</p>
+    </footer>
+  </body>
+</html>
