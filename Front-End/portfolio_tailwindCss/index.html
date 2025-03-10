@@ -14,7 +14,9 @@
         <h3>Portfolio</h3>
       </div>
       <nav>
-        <div class="navItems font-medium tracking-tight hidden md:block">
+        <div
+          class="navItems md:flex md:gap-4 font-medium tracking-tight hidden md:block"
+        >
           <a href="">Home</a>
           <a class="text-zinc-400" href="">Socials</a>
           <a class="text-zinc-400" href="">Projects</a>
@@ -34,7 +36,7 @@
           <h1 class="text-4xl md:text-8xl tracking-tighter font-bold">Zain.</h1>
           <div class="rightContent flex gap-1 items-center">
             <p class="text-zinc-400 tracking-tighter text-xs md:text-xl">
-              [ 08:50 AM ]
+              [ <span class="time"></span> ]
             </p>
             <div class="line w-10 md:w-20 h-[0.9px] bg-zinc-400"></div>
             <p class="tracking-tighter font-medium text-xs md:text-xl">
@@ -345,7 +347,32 @@
       <p class="text-xs md:text-sm">
         <span class="font-medium">Ali</span> Zain Aslam
       </p>
-      <p class="text-xs md:text-sm font-medium">03 Mar. 2025 [ 10:37 PM ]</p>
+      <p class="date text-xs md:text-sm font-medium"></p>
     </footer>
+
+    <script>
+      function changeTime() {
+        var dt = new Date();
+        var currHours = dt.getHours() % 12;
+        var currMinutes = dt.getMinutes();
+        var period = `${currHours}:${currMinutes} ${
+          currHours > 0 < 12 ? "PM" : "PM"
+        }`;
+        document.querySelector(".time").textContent = period;
+      }
+
+      function changeDate() {
+        var dt = new Date();
+        var currDate = dt.getDate();
+        var month = dt.getMonth() + 1;
+        var year = dt.getFullYear();
+        var dateMonth = currDate + "/" + month + "/" + year;
+        document.querySelector(".date").textContent = dateMonth;
+      }
+      setInterval(function () {
+        changeTime();
+        changeDate();
+      }, 1000);
+    </script>
   </body>
 </html>
