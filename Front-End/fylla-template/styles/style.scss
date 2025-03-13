@@ -17,6 +17,14 @@
   background-color: black;
 }
 
+@mixin primary-btn {
+  background-color: black;
+  color: hsla(48, 63%, 97%, 0.885);
+  padding: 0.45rem 1.3rem;
+  border-radius: 0.4rem;
+  width: fit-content;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -91,11 +99,7 @@ h3 {
     padding: 1rem 0;
   }
   button {
-    background-color: black;
-    color: hsla(48, 63%, 97%, 0.885);
-    padding: 0.45rem 1.3rem;
-    border-radius: 0.4rem;
-    width: fit-content;
+    @include primary-btn;
   }
   .line {
     @include line;
@@ -174,6 +178,51 @@ h3 {
     }
   }
 }
+
+.contact {
+  @include flex-column;
+  margin-top: 2rem;
+  gap: 1.5rem;
+
+  .top-container {
+    .text {
+      margin-top: 1.5rem;
+      p {
+        @include light-font-weight;
+      }
+      h2 {
+        font-size: 2.7rem;
+        padding: 1rem 0;
+        text-transform: uppercase;
+      }
+    }
+
+    img {
+      width: 3rem;
+      aspect-ratio: 1/1;
+    }
+  }
+  .line {
+    @include line;
+    display: none;
+  }
+  .bottom-container {
+    .element {
+      @include flex-column;
+      gap: 3rem;
+      p {
+        @include light-font-weight;
+        line-height: 1.3;
+        font-size: 1.1rem;
+      }
+      button {
+        @include primary-btn;
+        font-weight: 500;
+        letter-spacing: 1.3px;
+      }
+    }
+  }
+}
 // Desktop
 @media (min-width: 1020px) {
   main {
@@ -243,6 +292,39 @@ h3 {
       .top-container-team,
       .bottom-container-team {
         flex-direction: row;
+      }
+    }
+  }
+
+  .contact {
+    flex-direction: row;
+    min-height: 75vh;
+    gap: 1.5rem;
+    .top-container {
+      width: 65%;
+      @include flex-column;
+      justify-content: space-between;
+      .text {
+        h2 {
+          font-size: 4.5rem;
+          width: 80%;
+        }
+        order: -1;
+      }
+    }
+    .line {
+      display: block;
+      height: initial;
+      width: 1px;
+    }
+    .bottom-container {
+      .element {
+        @include flex-column;
+        justify-content: space-between;
+        height: 100%;
+        p {
+          font-size: 1.4rem;
+        }
       }
     }
   }
