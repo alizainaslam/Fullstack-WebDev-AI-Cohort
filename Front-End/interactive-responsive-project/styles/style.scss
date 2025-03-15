@@ -87,7 +87,6 @@ main {
 }
 
 // Top Destination
-
 .top-destination {
   margin-top: 5rem;
   padding: 0 1.2rem;
@@ -151,6 +150,89 @@ main {
   }
 }
 
+// Latest Stories
+.latest-story {
+  margin-top: 4rem;
+  padding: 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .top-section {
+    h2 {
+      font-size: 2rem;
+    }
+    button {
+      display: none;
+    }
+  }
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .top-story {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+      .content {
+        h4 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.6rem;
+          opacity: 0.8;
+        }
+        .text {
+          margin-top: 0.5rem;
+          opacity: 1;
+          font-size: 0.85rem;
+          line-height: 1.3;
+        }
+      }
+    }
+    .bottom-stories {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .story-card {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        img {
+          width: 8rem;
+          aspect-ratio: 1/1;
+          flex-basis: 1;
+          border-radius: 1rem;
+          object-fit: cover;
+        }
+        .text {
+          flex-basis: 2;
+          h4 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.6rem;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+  button {
+    margin-top: 2rem;
+    display: block;
+    background: none;
+    padding: 0.8rem 2rem;
+    border: 0.5px solid gray;
+    border-radius: 20rem;
+  }
+}
+
 // Responsive
 @media (min-width: 1020px) {
   .hero-section {
@@ -190,6 +272,10 @@ main {
   .top-destination {
     padding: 0 3rem;
     .top-section {
+      h2 {
+        font-size: 3rem;
+        line-height: 2;
+      }
       .places {
         display: flex;
         align-items: center;
@@ -197,10 +283,57 @@ main {
         p {
           display: block;
         }
-        button{
+        button {
           margin: 0;
         }
       }
+    }
+  }
+
+  .latest-story {
+    padding: 0 3rem;
+    width: 100%;
+    .top-section {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        margin-top: 0;
+        display: block;
+        background: none;
+        padding: 0.5rem 1rem;
+        border: 0.5px solid gray;
+        border-radius: 20rem;
+      }
+    }
+    .bottom-section {
+      flex-direction: row;
+      .top-story {
+        width: 50%;
+        .content {
+          h4 {
+            font-size: 2rem;
+          }
+        }
+      }
+      .bottom-stories {
+        width: 50%;
+        .story-card {
+          .text {
+            h4 {
+              font-size: 1.4rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    button {
+      display: none;
     }
   }
 }
