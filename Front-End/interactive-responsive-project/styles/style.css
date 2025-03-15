@@ -26,13 +26,12 @@ main {
 
 .hero-section {
   padding: 0 1.2rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 2rem;
 }
 .hero-section .top-section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.2rem;
 }
 .hero-section .top-section h1 {
@@ -80,28 +79,104 @@ main {
   aspect-ratio: 1/0.6;
 }
 
+.top-destination {
+  margin-top: 5rem;
+  padding: 0 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+.top-destination .top-section h2 {
+  font-size: 2rem;
+}
+.top-destination .top-section .places {
+  line-height: 2;
+  display: flex;
+  gap: 1rem;
+}
+.top-destination .top-section .places p {
+  opacity: 0.8;
+  display: none;
+}
+.top-destination .top-section .places button {
+  border: none;
+  background: none;
+  padding: 0.3rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+.top-destination .bottom-section {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.top-destination .bottom-section .image-cards {
+  display: flex;
+  gap: 1rem;
+}
+.top-destination .bottom-section .image-cards .cards {
+  width: 15rem;
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.top-destination .bottom-section .image-cards .cards img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1.3;
+  border-radius: 1rem;
+}
+.top-destination .bottom-section .image-cards .cards .text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.top-destination .bottom-section .image-cards .cards .text p {
+  opacity: 0.8;
+}
+
 @media (min-width: 1020px) {
   .hero-section {
     padding: 0 3rem;
-    flex-direction: row;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    gap: 2rem;
   }
   .hero-section .top-section {
     width: 90%;
-    justify-content: center;
+    align-items: center;
+    gap: 0rem;
   }
   .hero-section .top-section h1 {
     font-size: 5rem;
+  }
+  .hero-section .top-section p {
+    font-size: 1.3rem;
   }
   .hero-section .bottom-section {
     width: 90%;
     grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" ". . c c";
   }
-  .hero-section img {
+  .hero-section .bottom-section img {
     height: 100%;
     width: 100%;
-    aspect-ratio: 1/1.2;
+    aspect-ratio: 1/1.1;
+  }
+  .top-destination {
+    padding: 0 3rem;
+  }
+  .top-destination .top-section .places {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .top-destination .top-section .places p {
+    display: block;
+  }
+  .top-destination .top-section .places button {
+    margin: 0;
   }
 }/*# sourceMappingURL=style.css.map */
