@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #111;
+  background-color: #fff;
+}
+
+html {
+  font-size: clamp(16px, 1vw, 20px);
+}
+
+main {
+  margin-top: 3rem;
+}
+
+.hero-section {
+  padding: 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero-section .top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.hero-section .top-section h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.hero-section .top-section h1 span {
+  opacity: 0.6;
+}
+.hero-section .top-section p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+.hero-section .top-section button {
+  background-color: #111;
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+}
+.hero-section .bottom-section {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c";
+}
+.hero-section .bottom-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+.hero-section .bottom-section .image-1 {
+  grid-area: a;
+}
+.hero-section .bottom-section .image-2 {
+  grid-area: b;
+}
+.hero-section .bottom-section .image-3 {
+  grid-area: c;
+  aspect-ratio: 1/0.6;
+}
+
+@media (min-width: 1020px) {
+  .hero-section {
+    padding: 0 3rem;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+  }
+  .hero-section .top-section {
+    width: 90%;
+    justify-content: center;
+  }
+  .hero-section .top-section h1 {
+    font-size: 5rem;
+  }
+  .hero-section .bottom-section {
+    width: 90%;
+    grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" ". . c c";
+  }
+  .hero-section img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1.2;
+  }
+}/*# sourceMappingURL=style.css.map */
