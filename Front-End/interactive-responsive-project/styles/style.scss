@@ -23,9 +23,17 @@ main {
   margin-top: 3rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+.hero-section,
+.top-destination,
+.latest-story,
+.t-highlights {
+  padding: 0 1.2rem;
+}
 // Hero Section
 .hero-section {
-  padding: 0 1.2rem;
   display: grid;
   gap: 2rem;
   .top-section {
@@ -89,13 +97,9 @@ main {
 // Top Destination
 .top-destination {
   margin-top: 5rem;
-  padding: 0 1.2rem;
   display: grid;
   gap: 1rem;
   .top-section {
-    h2 {
-      font-size: 2rem;
-    }
     .places {
       line-height: 2;
       display: flex;
@@ -153,14 +157,10 @@ main {
 // Latest Stories
 .latest-story {
   margin-top: 4rem;
-  padding: 0 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   .top-section {
-    h2 {
-      font-size: 2rem;
-    }
     button {
       display: none;
     }
@@ -233,10 +233,95 @@ main {
   }
 }
 
+// Trekker's Highlights
+.t-highlights {
+  margin-top: 4rem;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .top-section {
+      .user-info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        img {
+          height: 3rem;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        .text {
+          p {
+            opacity: 0.8;
+            font-size: 0.7rem;
+          }
+        }
+      }
+      .review {
+        display: flex;
+        flex-direction: column;
+        .stars {
+          display: flex;
+          gap: 0.2rem;
+          line-height: 2;
+        }
+        h4 {
+          font-size: 0.9rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .bottom-section {
+      display: flex;
+      gap: 1rem;
+      .right-img {
+        img {
+          max-height: 20rem;
+          aspect-ratio: 1/1.5;
+          border-radius: 1rem;
+          object-fit: cover;
+        }
+      }
+      .left-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .top {
+          img {
+            max-height: 14rem;
+            border-radius: 1rem;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+        button {
+          background: none;
+          padding: 0.8rem 2rem;
+          border: 0.5px solid gray;
+          border-radius: 20rem;
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
 // Responsive
 @media (min-width: 1020px) {
-  .hero-section {
+  h2 {
+    font-size: 3rem;
+    line-height: 2;
+  }
+  .hero-section,
+  .top-destination,
+  .latest-story,
+  .t-highlights {
     padding: 0 3rem;
+  }
+  .hero-section {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     .top-section {
@@ -270,12 +355,7 @@ main {
   }
 
   .top-destination {
-    padding: 0 3rem;
     .top-section {
-      h2 {
-        font-size: 3rem;
-        line-height: 2;
-      }
       .places {
         display: flex;
         align-items: center;
@@ -291,7 +371,6 @@ main {
   }
 
   .latest-story {
-    padding: 0 3rem;
     width: 100%;
     .top-section {
       width: 100%;
@@ -312,6 +391,10 @@ main {
       flex-direction: row;
       .top-story {
         width: 50%;
+        img {
+          max-height: 18rem;
+          aspect-ratio: 1/2;
+        }
         .content {
           h4 {
             font-size: 2rem;
@@ -334,6 +417,41 @@ main {
     }
     button {
       display: none;
+    }
+  }
+
+  .t-highlights {
+    .content {
+      flex-direction: row;
+      .top-section {
+        width: 50%;
+        .review{
+          h4{
+            font-size: 1rem;
+          }
+          p{
+            font-size: 1rem;
+          }
+        }
+      }
+      .bottom-section {
+        justify-content: center;
+        width: 50%;
+        .right-img {
+          img {
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 1/1.1;
+          }
+        }
+        .left-img {
+          img {
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 1/1.1;
+          }
+        }
+      }
     }
   }
 }

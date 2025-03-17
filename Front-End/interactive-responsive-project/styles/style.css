@@ -24,8 +24,18 @@ main {
   margin-top: 3rem;
 }
 
-.hero-section {
+h2 {
+  font-size: 2rem;
+}
+
+.hero-section,
+.top-destination,
+.latest-story,
+.t-highlights {
   padding: 0 1.2rem;
+}
+
+.hero-section {
   display: grid;
   gap: 2rem;
 }
@@ -81,12 +91,8 @@ main {
 
 .top-destination {
   margin-top: 5rem;
-  padding: 0 1.2rem;
   display: grid;
   gap: 1rem;
-}
-.top-destination .top-section h2 {
-  font-size: 2rem;
 }
 .top-destination .top-section .places {
   line-height: 2;
@@ -141,13 +147,9 @@ main {
 
 .latest-story {
   margin-top: 4rem;
-  padding: 0 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.latest-story .top-section h2 {
-  font-size: 2rem;
 }
 .latest-story .top-section button {
   display: none;
@@ -219,9 +221,88 @@ main {
   border-radius: 20rem;
 }
 
+.t-highlights {
+  margin-top: 4rem;
+}
+.t-highlights .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.t-highlights .content .top-section .user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.t-highlights .content .top-section .user-info img {
+  height: 3rem;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.t-highlights .content .top-section .user-info .text p {
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+.t-highlights .content .top-section .review {
+  display: flex;
+  flex-direction: column;
+}
+.t-highlights .content .top-section .review .stars {
+  display: flex;
+  gap: 0.2rem;
+  line-height: 2;
+}
+.t-highlights .content .top-section .review h4 {
+  font-size: 0.9rem;
+}
+.t-highlights .content .top-section .review p {
+  font-size: 0.8rem;
+}
+.t-highlights .content .bottom-section {
+  display: flex;
+  gap: 1rem;
+}
+.t-highlights .content .bottom-section .right-img img {
+  max-height: 20rem;
+  aspect-ratio: 1/1.5;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.t-highlights .content .bottom-section .left-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.t-highlights .content .bottom-section .left-img .top img {
+  max-height: 14rem;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.t-highlights .content .bottom-section .left-img button {
+  background: none;
+  padding: 0.8rem 2rem;
+  border: 0.5px solid gray;
+  border-radius: 20rem;
+  margin-bottom: 0.4rem;
+}
+
 @media (min-width: 1020px) {
-  .hero-section {
+  h2 {
+    font-size: 3rem;
+    line-height: 2;
+  }
+  .hero-section,
+  .top-destination,
+  .latest-story,
+  .t-highlights {
     padding: 0 3rem;
+  }
+  .hero-section {
     grid-template-columns: 1fr 1fr;
     width: 100%;
   }
@@ -245,13 +326,6 @@ main {
     width: 100%;
     aspect-ratio: 1/1.1;
   }
-  .top-destination {
-    padding: 0 3rem;
-  }
-  .top-destination .top-section h2 {
-    font-size: 3rem;
-    line-height: 2;
-  }
   .top-destination .top-section .places {
     display: flex;
     align-items: center;
@@ -264,7 +338,6 @@ main {
     margin: 0;
   }
   .latest-story {
-    padding: 0 3rem;
     width: 100%;
   }
   .latest-story .top-section {
@@ -288,6 +361,10 @@ main {
   .latest-story .bottom-section .top-story {
     width: 50%;
   }
+  .latest-story .bottom-section .top-story img {
+    max-height: 18rem;
+    aspect-ratio: 1/2;
+  }
   .latest-story .bottom-section .top-story .content h4 {
     font-size: 2rem;
   }
@@ -302,5 +379,31 @@ main {
   }
   .latest-story button {
     display: none;
+  }
+  .t-highlights .content {
+    flex-direction: row;
+  }
+  .t-highlights .content .top-section {
+    width: 50%;
+  }
+  .t-highlights .content .top-section .review h4 {
+    font-size: 1rem;
+  }
+  .t-highlights .content .top-section .review p {
+    font-size: 1rem;
+  }
+  .t-highlights .content .bottom-section {
+    justify-content: center;
+    width: 50%;
+  }
+  .t-highlights .content .bottom-section .right-img img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1.1;
+  }
+  .t-highlights .content .bottom-section .left-img img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1.1;
   }
 }/*# sourceMappingURL=style.css.map */
