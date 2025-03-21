@@ -28,3 +28,19 @@ if (sum % 2 == 0) {
 }*/
 
 // === 2nd question finish!
+
+/* 3️⃣;  Character Case Checker – Ask the user for a single character. 
+Check if it's uppercase, lowercase, or neither (not a letter). */
+
+/* var userInput = prompt("Enter a single character:");
+if (userInput.length !== 1) {
+  console.log("Enter only a single character.");
+} else if (userInput >= "A" && userInput <= "Z") {
+  console.log("It is uppercase");
+} else if (userInput >= "a" && userInput >= "z") {
+  console.log("It is lowercase");
+} else {
+  console.log("It is neither!");
+} */
+
+// === 3rd question finish!
