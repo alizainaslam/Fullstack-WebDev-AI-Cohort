@@ -120,3 +120,21 @@ operator (+, -, *, /). Perform the operation and display the result. */
 //   console.log(result);
 // }
 // === 6th question finish!
+
+/* 7️⃣;  Positive, Negative, or Zero – Take a number input and check if it 
+is positive, negative, or zero.*/
+
+// var inputNum = Number(prompt("Enter a number to check status:"));
+// if (isNaN(inputNum)) {
+//   console.log("Invalid data type!");
+// } else {
+//   if (inputNum < 0) {
+//     console.log("Number is Negetive");
+//   } else if (inputNum == 0) {
+//     console.log("Number is 0");
+//   } else {
+//     console.log("Number is Positive");
+//   }
+// }
+
+// === 7th question finish!
