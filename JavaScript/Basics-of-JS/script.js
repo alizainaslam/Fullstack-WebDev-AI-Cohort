@@ -138,3 +138,28 @@ is positive, negative, or zero.*/
 // }
 
 // === 7th question finish!
+
+/* 8️⃣;  User Greeting – Ask for the user's name and time (24-hour 
+format). Greet them accordingly:
+ 5 AM–12 PM: "Good Morning, [Name]!"
+ 12 PM–5 PM: "Good Afternoon, [Name]!"
+ 5 PM–9 PM: "Good Evening, [Name]!"
+ 9 PM–5 AM: "Good Night, [Name]!" */
+
+// var userName = prompt("Enter your name and see Greeting:");
+// var time = new Date().getHours();
+// var timeFormat = time % 12 || 12;
+// var timeZone = time >= 12 ? "PM" : "AM";
+// var currentTime = timeFormat + " " + timeZone;
+
+// if (timeFormat >= 5 && timeFormat < 12 && timeZone == "AM") {
+//   console.log("Good Morning, ", userName);
+// } else if (timeFormat >= 12 && timeFormat < 5 && timeZone == "PM") {
+//   console.log("Good Afternoon, ", userName);
+// } else if (timeFormat >= 5 && timeFormat < 9 && timeZone == "PM") {
+//   console.log("Good Evening, ", userName);
+// } else {
+//   console.log("Good Night, ", userName);
+// }
+
+// === 8th question finish!
