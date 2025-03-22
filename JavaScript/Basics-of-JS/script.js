@@ -66,3 +66,20 @@ Math.max(). */
 // console.log("Largest number is:", largestNumber);
 
 // === 4th question finish!
+
+/* 5️⃣; eap Year Checker – Ask the user for a year and determine if 
+it's a leap year or not. */
+
+// var isLeapYear = Number(
+//   prompt("Enter a year to check if it is a leap year or not.")
+// );
+
+// if (isNaN(isLeapYear)) {
+//   console.error("Invalid Year.");
+// } else if (isLeapYear % 4 === 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// === 5th question finish!
