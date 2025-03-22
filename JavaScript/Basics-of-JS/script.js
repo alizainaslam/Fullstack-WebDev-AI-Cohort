@@ -165,3 +165,23 @@ if (timeFormat >= 5 && timeFormat < 12 && timeZone == "AM") {
 } */
 
 // === 8th question finish!
+
+/* 9️⃣;  Traffic Light System – Ask the user for a traffic light color (red, yellow, green). Print appropriate messages:
+ Red: "Stop!"
+ Yellow: "Get Ready!"
+ Green: "Go!"*/
+
+var inputColor = prompt("Enter color name of traffic light:").toLowerCase();
+if (typeof inputColor !== "string") {
+  console.log("Invalid Input");
+} else if (inputColor === "red") {
+  console.log("Stop!");
+} else if (inputColor === "yellow") {
+  console.log("Get Ready!");
+} else if (inputColor === "green") {
+  console.log("Go!");
+} else {
+  console.log("Invalid Color");
+}
+
+// === 9th question finish!
