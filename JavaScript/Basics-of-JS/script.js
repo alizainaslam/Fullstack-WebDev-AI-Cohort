@@ -87,36 +87,36 @@ it's a leap year or not. */
 /* 6️⃣;  Simple Calculator – Ask the user for two numbers and an 
 operator (+, -, *, /). Perform the operation and display the result. */
 
-var num1 = Number(prompt("Enter 1st number for calculation:"));
-var operator = String(prompt("Enter any mathimatic operator for calculation:"));
-var num2 = Number(prompt("Enter 2nd number for calculation:"));
+// var num1 = Number(prompt("Enter 1st number for calculation:"));
+// var operator = String(prompt("Enter any mathimatic operator for calculation:"));
+// var num2 = Number(prompt("Enter 2nd number for calculation:"));
 
-var result;
+// var result;
 
-if (isNaN(num1) || isNaN(num2)) {
-  console.error("Invalid data type!");
-} else {
-  switch (operator) {
-    case "+":
-      result = num1 + num2;
-      break;
-    case "-":
-      result = num1 - num2;
-      break;
-    case "*":
-      result = num1 * num2;
-      break;
-    case "/":
-      result = num1 / num2;
-      break;
-    default:
-      console.log("Something went wrong!");
-  }
-}
+// if (isNaN(num1) || isNaN(num2)) {
+//   console.error("Invalid data type!");
+// } else {
+//   switch (operator) {
+//     case "+":
+//       result = num1 + num2;
+//       break;
+//     case "-":
+//       result = num1 - num2;
+//       break;
+//     case "*":
+//       result = num1 * num2;
+//       break;
+//     case "/":
+//       result = num1 / num2;
+//       break;
+//     default:
+//       console.log("Something went wrong!");
+//   }
+// }
 
-if (typeof result === "undefined") {
-  console.log();
-} else {
-  console.log(result);
-}
+// if (typeof result === "undefined") {
+//   console.log();
+// } else {
+//   console.log(result);
+// }
 // === 6th question finish!
