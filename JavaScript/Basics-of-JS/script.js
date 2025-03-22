@@ -67,7 +67,7 @@ Math.max(). */
 
 // === 4th question finish!
 
-/* 5️⃣; eap Year Checker – Ask the user for a year and determine if 
+/* 5️⃣;  Leap Year Checker – Ask the user for a year and determine if 
 it's a leap year or not. */
 
 // var isLeapYear = Number(
@@ -83,3 +83,40 @@ it's a leap year or not. */
 // }
 
 // === 5th question finish!
+
+/* 6️⃣;  Simple Calculator – Ask the user for two numbers and an 
+operator (+, -, *, /). Perform the operation and display the result. */
+
+var num1 = Number(prompt("Enter 1st number for calculation:"));
+var operator = String(prompt("Enter any mathimatic operator for calculation:"));
+var num2 = Number(prompt("Enter 2nd number for calculation:"));
+
+var result;
+
+if (isNaN(num1) || isNaN(num2)) {
+  console.error("Invalid data type!");
+} else {
+  switch (operator) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
+    default:
+      console.log("Something went wrong!");
+  }
+}
+
+if (typeof result === "undefined") {
+  console.log();
+} else {
+  console.log(result);
+}
+// === 6th question finish!
