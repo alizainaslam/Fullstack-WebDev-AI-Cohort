@@ -44,3 +44,25 @@ if (userInput.length !== 1) {
 } */
 
 // === 3rd question finish!
+
+/* 4️⃣;  Largest of Three Numbers – Take three numbers as input and 
+print the largest number among them without using 
+Math.max(). */
+
+// var num1 = Number(prompt("Enter your first number:"));
+// var num2 = Number(prompt("Enter your second number:"));
+// var num3 = Number(prompt("Enter your third number:"));
+// var array = [num1, num2, num3];
+// var largestNumber = array[0];
+
+// for (let i = 0; i < array.length; i++) {
+//   if (isNaN(array[i])) {
+//     console.error("Invalid input! Please enter only numbers.");
+//   }
+//   if (largestNumber < array[i]) {
+//     largestNumber = array[i];
+//   }
+// }
+// console.log("Largest number is:", largestNumber);
+
+// === 4th question finish!
