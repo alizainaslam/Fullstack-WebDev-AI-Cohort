@@ -49,93 +49,95 @@ if (userInput.length !== 1) {
 print the largest number among them without using 
 Math.max(). */
 
-// var num1 = Number(prompt("Enter your first number:"));
-// var num2 = Number(prompt("Enter your second number:"));
-// var num3 = Number(prompt("Enter your third number:"));
-// var array = [num1, num2, num3];
-// var largestNumber = array[0];
+/* 
+var num1 = Number(prompt("Enter your first number:"));
+var num2 = Number(prompt("Enter your second number:"));
+var num3 = Number(prompt("Enter your third number:"));
+var array = [num1, num2, num3];
+var largestNumber = array[0];
 
-// for (let i = 0; i < array.length; i++) {
-//   if (isNaN(array[i])) {
-//     console.error("Invalid input! Please enter only numbers.");
-//   }
-//   if (largestNumber < array[i]) {
-//     largestNumber = array[i];
-//   }
-// }
-// console.log("Largest number is:", largestNumber);
+for (let i = 0; i < array.length; i++) {
+  if (isNaN(array[i])) {
+    console.error("Invalid input! Please enter only numbers.");
+  }
+  if (largestNumber < array[i]) {
+    largestNumber = array[i];
+  }
+}
+console.log("Largest number is:", largestNumber); */
 
 // === 4th question finish!
 
 /* 5️⃣;  Leap Year Checker – Ask the user for a year and determine if 
 it's a leap year or not. */
 
-// var isLeapYear = Number(
-//   prompt("Enter a year to check if it is a leap year or not.")
-// );
+/* 
+var isLeapYear = Number(
+  prompt("Enter a year to check if it is a leap year or not.")
+);
 
-// if (isNaN(isLeapYear)) {
-//   console.error("Invalid Year.");
-// } else if (isLeapYear % 4 === 0) {
-//   console.log(true);
-// } else {
-//   console.log(false);
-// }
+if (isNaN(isLeapYear)) {
+  console.error("Invalid Year.");
+} else if (isLeapYear % 4 === 0) {
+  console.log(true);
+} else {
+  console.log(false);
+} */
 
 // === 5th question finish!
 
 /* 6️⃣;  Simple Calculator – Ask the user for two numbers and an 
 operator (+, -, *, /). Perform the operation and display the result. */
 
-// var num1 = Number(prompt("Enter 1st number for calculation:"));
-// var operator = String(prompt("Enter any mathimatic operator for calculation:"));
-// var num2 = Number(prompt("Enter 2nd number for calculation:"));
+/* var num1 = Number(prompt("Enter 1st number for calculation:"));
+var operator = String(prompt("Enter any mathimatic operator for calculation:"));
+var num2 = Number(prompt("Enter 2nd number for calculation:"));
 
-// var result;
+var result;
 
-// if (isNaN(num1) || isNaN(num2)) {
-//   console.error("Invalid data type!");
-// } else {
-//   switch (operator) {
-//     case "+":
-//       result = num1 + num2;
-//       break;
-//     case "-":
-//       result = num1 - num2;
-//       break;
-//     case "*":
-//       result = num1 * num2;
-//       break;
-//     case "/":
-//       result = num1 / num2;
-//       break;
-//     default:
-//       console.log("Something went wrong!");
-//   }
-// }
+if (isNaN(num1) || isNaN(num2)) {
+  console.error("Invalid data type!");
+} else {
+  switch (operator) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
+    default:
+      console.log("Something went wrong!");
+  }
+}
 
-// if (typeof result === "undefined") {
-//   console.log();
-// } else {
-//   console.log(result);
-// }
+if (typeof result === "undefined") {
+  console.log();
+} else {
+  console.log(result);
+} */
 // === 6th question finish!
 
 /* 7️⃣;  Positive, Negative, or Zero – Take a number input and check if it 
 is positive, negative, or zero.*/
 
-// var inputNum = Number(prompt("Enter a number to check status:"));
-// if (isNaN(inputNum)) {
-//   console.log("Invalid data type!");
-// } else {
-//   if (inputNum < 0) {
-//     console.log("Number is Negetive");
-//   } else if (inputNum == 0) {
-//     console.log("Number is 0");
-//   } else {
-//     console.log("Number is Positive");
-//   }
-// }
+/* var inputNum = Number(prompt("Enter a number to check status:"));
+if (isNaN(inputNum)) {
+  console.log("Invalid data type!");
+} else {
+  if (inputNum < 0) {
+    console.log("Number is Negetive");
+  } else if (inputNum == 0) {
+    console.log("Number is 0");
+  } else {
+    console.log("Number is Positive");
+  }
+} */
 
 // === 7th question finish!
 
@@ -146,20 +148,20 @@ format). Greet them accordingly:
  5 PM–9 PM: "Good Evening, [Name]!"
  9 PM–5 AM: "Good Night, [Name]!" */
 
-// var userName = prompt("Enter your name and see Greeting:");
-// var time = new Date().getHours();
-// var timeFormat = time % 12 || 12;
-// var timeZone = time >= 12 ? "PM" : "AM";
-// var currentTime = timeFormat + " " + timeZone;
+/* var userName = prompt("Enter your name and see Greeting:");
+var time = new Date().getHours();
+var timeFormat = time % 12 || 12;
+var timeZone = time >= 12 ? "PM" : "AM";
+var currentTime = timeFormat + " " + timeZone;
 
-// if (timeFormat >= 5 && timeFormat < 12 && timeZone == "AM") {
-//   console.log("Good Morning, ", userName);
-// } else if (timeFormat >= 12 && timeFormat < 5 && timeZone == "PM") {
-//   console.log("Good Afternoon, ", userName);
-// } else if (timeFormat >= 5 && timeFormat < 9 && timeZone == "PM") {
-//   console.log("Good Evening, ", userName);
-// } else {
-//   console.log("Good Night, ", userName);
-// }
+if (timeFormat >= 5 && timeFormat < 12 && timeZone == "AM") {
+  console.log("Good Morning, ", userName);
+} else if (timeFormat >= 12 && timeFormat < 5 && timeZone == "PM") {
+  console.log("Good Afternoon, ", userName);
+} else if (timeFormat >= 5 && timeFormat < 9 && timeZone == "PM") {
+  console.log("Good Evening, ", userName);
+} else {
+  console.log("Good Night, ", userName);
+} */
 
 // === 8th question finish!
