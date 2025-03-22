@@ -171,7 +171,7 @@ if (timeFormat >= 5 && timeFormat < 12 && timeZone == "AM") {
  Yellow: "Get Ready!"
  Green: "Go!"*/
 
-var inputColor = prompt("Enter color name of traffic light:").toLowerCase();
+/* var inputColor = prompt("Enter color name of traffic light:").toLowerCase();
 if (typeof inputColor !== "string") {
   console.log("Invalid Input");
 } else if (inputColor === "red") {
@@ -182,6 +182,6 @@ if (typeof inputColor !== "string") {
   console.log("Go!");
 } else {
   console.log("Invalid Color");
-}
+} */
 
 // === 9th question finish!
