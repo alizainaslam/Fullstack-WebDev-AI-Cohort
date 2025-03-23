@@ -199,3 +199,28 @@ if (isNaN(userNumber)) {
 } */
 
 // === 10th question finish!
+
+/* 1️⃣1️⃣;  Grade Calculator – Ask the user for their marks (0-100). 
+Assign grades based on the range:
+ 90-100: A
+ 80-89: B
+ 70-79: C
+ 60-69: D
+ Below 60: F */
+
+/* var userMarks = Number(prompt("Enter your marks for checking grades:"));
+if (isNaN(userMarks) || userMarks > 100 || userMarks < 0) {
+  console.log("Invalid Marks");
+} else if (userMarks >= 90 && userMarks <= 100) {
+  console.log("Grade A");
+} else if (userMarks >= 80 && userMarks <= 89) {
+  console.log("Grade B");
+} else if (userMarks >= 70 && userMarks <= 79) {
+  console.log("Grade C");
+} else if (userMarks >= 60 && userMarks <= 69) {
+  console.log("Grade C");
+} else {
+  console.log("FAIL");
+} */
+
+// === 11th question finish!
