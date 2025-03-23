@@ -278,3 +278,17 @@ if (isNaN(userNumber)) {
 } */
 
 // === 14th question finish!
+
+/* 1️⃣5️⃣;  Number Reversal – Take a three-digit number from the user 
+and print its reverse. (Example: 123 → 321). */
+
+/* 
+let userInput = 123;
+let arr = String(userInput).split("");
+let result = [];
+for (let i = arr.length - 1; i >= 0; i--) {
+  result.push(arr[i]);
+}
+console.log(result.join("")); */
+
+// === 15th question finish!
