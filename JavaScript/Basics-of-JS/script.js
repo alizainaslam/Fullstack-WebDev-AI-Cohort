@@ -260,3 +260,21 @@ let num2 = 20;
 console.log(num1, num2); */
 
 // === 13th question finish!
+
+/* 1️⃣4️⃣;  FizzBuzz (Multiple of Both) – Ask the user for a number. If it's a multiple of both 3 and 5, print “FizzBuzz”; if only 3, print “Fizz”; if only 5, print “Buzz”; otherwise, print the number itself.*/
+
+/* const userNumber = 15;
+
+if (isNaN(userNumber)) {
+  console.log("Invalid Number!");
+} else if (userNumber % 3 === 0 && userNumber % 5 === 0) {
+  console.log("FizzBuzz");
+} else if (userNumber % 3 === 0) {
+  console.log("Fizz");
+} else if (userNumber % 5 === 0) {
+  console.log("Buzz");
+} else {
+  console.log(userNumber);
+} */
+
+// === 14th question finish!
