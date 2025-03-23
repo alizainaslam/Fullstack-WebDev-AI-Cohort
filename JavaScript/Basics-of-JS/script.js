@@ -306,3 +306,18 @@ for (let i = 0; i < arr.length; i++) {
 console.log(sum); */
 
 // === 16th question finish!
+
+/* 1️⃣7️⃣;  Palindrome Checker – Ask the user for a word. Check if it 
+reads the same forward and backward. Print “Palindrome” or 
+“Not a Palindrome.” */
+
+/* const inputWord = String("Civic").toLowerCase();
+let reverseWord = inputWord.split("").reverse().join("");
+
+if (inputWord === reverseWord) {
+  console.log("Palindrome");
+} else {
+  console.log("Not a Palindrome");
+} */
+
+// === 17th question finish!
