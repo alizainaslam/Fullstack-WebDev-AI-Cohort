@@ -292,3 +292,17 @@ for (let i = arr.length - 1; i >= 0; i--) {
 console.log(result.join("")); */
 
 // === 15th question finish!
+
+/* 1️⃣6️⃣;  Sum of Digits – Take a number from the user and print the sum 
+of its digits. (Example: 123 → 1+2+3 = 6).*/
+
+/* let userInput = 123;
+let arr = String(userInput).split("");
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+  let num = Number(arr[i]);
+  sum += num;
+}
+console.log(sum); */
+
+// === 16th question finish!
