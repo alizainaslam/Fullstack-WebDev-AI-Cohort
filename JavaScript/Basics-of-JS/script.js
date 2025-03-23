@@ -250,3 +250,13 @@ if (
 } */
 
 // === 12th question finish!
+
+/* 1️⃣3️⃣;  Swapping Without Third Variable – Take two numbers from the 
+user and swap their values without using a third variable. */
+
+/* let num1 = 18;
+let num2 = 20;
+[num1, num2] = [num2, num1];
+console.log(num1, num2); */
+
+// === 13th question finish!
