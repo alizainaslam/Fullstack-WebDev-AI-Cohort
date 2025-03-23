@@ -321,3 +321,17 @@ if (inputWord === reverseWord) {
 } */
 
 // === 17th question finish!
+
+/* 1️⃣8️⃣;  Reverse Without String Methods – Ask the user for a number 
+and reverse it without using .split(), .reverse(), or .join(). */
+
+/* let userNum = parseInt(123);
+let reverseNum = 0;
+
+while (userNum > 0) {
+  reverseNum = reverseNum * 10 + (userNum % 10);
+  userNum = Math.floor(userNum / 10);
+}
+console.log(reverseNum); */
+
+// === 18th question finish!
