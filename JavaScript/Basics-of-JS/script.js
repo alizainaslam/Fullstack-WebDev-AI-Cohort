@@ -224,3 +224,29 @@ if (isNaN(userMarks) || userMarks > 100 || userMarks < 0) {
 } */
 
 // === 11th question finish!
+
+/* 1️⃣2️⃣;  Simple Login System – Set a predefined username and 
+password. Ask the user to enter their credentials using 
+prompt(). If correct, print “Login Successful”; otherwise, print 
+“Incorrect username or password.” */
+
+/* const definedUserName = prompt(
+  "Enter user name : username is ali;"
+).toLowerCase();
+const definedUserPassword = prompt(
+  "Enter password : password is ali123;"
+).toLowerCase();
+
+const userInputName = "Ali".toLowerCase();
+const userInputPassword = "ali123";
+
+if (
+  userInputName !== definedUserName ||
+  userInputPassword !== definedUserPassword
+) {
+  console.log("ncorrect username or password");
+} else {
+  console.log("Login Successful");
+} */
+
+// === 12th question finish!
