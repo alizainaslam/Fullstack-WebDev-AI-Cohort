@@ -335,3 +335,23 @@ while (userNum > 0) {
 console.log(reverseNum); */
 
 // === 18th question finish!
+
+/* 1️⃣9️⃣;  Find Second Largest – Take three numbers as input and find 
+the second largest number (without using sort() or Math.max()).*/
+
+/* const inputNumbers = [10, 20, 15, 25, 21];
+let firstLargest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let i = 0; i < inputNumbers.length; i++) {
+  if (inputNumbers[i] > firstLargest) {
+    secondLargest = firstLargest;
+    firstLargest = inputNumbers[i];
+  } else if (inputNumbers[i] > secondLargest) {
+    secondLargest = inputNumbers[i];
+  }
+}
+
+console.log(firstLargest, secondLargest); */
+
+// === 19th question finish!
