@@ -378,3 +378,22 @@ for (let char of userInputWords) {
 console.log(non_repeat_char); */
 
 // === 20th question finish!
+
+/* 2️⃣1️⃣;  Even Digit Counter – Take a number from the user and count 
+how many even digits it has.*/
+
+/* const userInputNumber = 10;
+let count = 0;
+
+if (userInputNumber <= 1) {
+  console.log("Upgarde your number!");
+} else {
+  for (let i = 1; i <= userInputNumber; i++) {
+    if (i % 2 === 0) {
+      count++;
+    }
+  }
+  console.log(count);
+} */
+
+// === 21th question finish!
