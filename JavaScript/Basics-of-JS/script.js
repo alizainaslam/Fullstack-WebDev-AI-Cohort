@@ -420,3 +420,20 @@ if (userAge < 18) {
 } */
 
 // === 22th question finish!
+
+/* 2️⃣3️⃣;  Toggle Case – Ask the user for a word and toggle the case of 
+every character. Example: HeLLo → hEllO. */
+
+/* const userWord = "HeLLo";
+let result = "";
+
+for (const char of userWord) {
+  if (char === char.toLowerCase()) {
+    result += char.toUpperCase();
+  } else {
+    result += char.toLowerCase();
+  }
+}
+console.log(result); */
+
+// === 23th question finish!
