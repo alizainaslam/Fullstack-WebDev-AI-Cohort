@@ -355,3 +355,26 @@ for (let i = 0; i < inputNumbers.length; i++) {
 console.log(firstLargest, secondLargest); */
 
 // === 19th question finish!
+
+/* 2️⃣0️⃣;  Find First Non-Repeating Character – Ask the user for a word 
+and find the first character that does not repeat. Example: hello 
+→ h (since e, l, and o repeat). */
+
+/* const userInputWords = "hello";
+const countChar = {};
+let non_repeat_char;
+
+for (let i = 0; i < userInputWords.length; i++) {
+  countChar[userInputWords[i]]
+    ? countChar[userInputWords[i]]++
+    : (countChar[userInputWords[i]] = 1);
+}
+for (let char of userInputWords) {
+  if (countChar[char] === 1) {
+    non_repeat_char = char;
+    break;
+  }
+}
+console.log(non_repeat_char); */
+
+// === 20th question finish!
