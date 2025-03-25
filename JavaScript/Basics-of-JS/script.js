@@ -397,3 +397,26 @@ if (userInputNumber <= 1) {
 } */
 
 // === 21th question finish!
+
+/* 2️⃣2️⃣;   Nested Condition Challenge – Ask the user for their age and 
+salary. Print a message based on conditions:
+ If age is below 18, print “Not eligible”
+ If age is 18 or more but salary is less than ₹20,000, print “Low        
+Salary”
+ If salary is ₹50,000 or more, print “High Salary”
+ .  Otherwise, print “Medium Salary” */
+
+/* const userAge = 19;
+const userSalary = 10000;
+
+if (userAge < 18) {
+  console.log("Not eligible");
+} else if (userAge > 18 && userSalary < 20000) {
+  console.log("Low Salary");
+} else if (userSalary >= 50000) {
+  console.log("High Salary");
+} else {
+  console.log("Medium Salary");
+} */
+
+// === 22th question finish!
