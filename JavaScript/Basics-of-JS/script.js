@@ -437,3 +437,25 @@ for (const char of userWord) {
 console.log(result); */
 
 // === 23th question finish!
+
+/* 2️⃣4️⃣;  Find the Missing Number in a Sequence – Take a list of 
+consecutive numbers (except one missing) and find the 
+missing number. Example: 1, 2, 3, 5 → Missing number is 4. */
+
+/* const lisOfNumbers = [1, 2, 3, 5];
+let maxNum = lisOfNumbers[0];
+let missingNumber;
+
+for (let i = 0; i < lisOfNumbers.length; i++) {
+  if (maxNum < lisOfNumbers[i]) {
+    maxNum = lisOfNumbers[i];
+  }
+}
+for (let i = 1; i <= maxNum; i++) {
+  if (!lisOfNumbers.includes(i)) {
+    missingNumber = i;
+  }
+}
+console.log(`Missing number is : ${missingNumber}`); */
+
+// === 24th question finish!
