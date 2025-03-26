@@ -459,3 +459,31 @@ for (let i = 1; i <= maxNum; i++) {
 console.log(`Missing number is : ${missingNumber}`); */
 
 // === 24th question finish!
+
+/* 2️⃣5️⃣;  Convert Number to Words – Take a single-digit number and 
+print it in words (Example: 1 → One, 2 → Two).*/
+
+/* 
+const inputNumber = 3;
+
+switch (inputNumber) {
+  case 1:
+    console.log("One");
+    break;
+  case 2:
+    console.log("Two");
+    break;
+  case 3:
+    console.log("Three");
+    break;
+  case 4:
+    console.log("Four");
+    break;
+  case 5:
+    console.log("Five");
+    break;
+  default:
+    console.log("Invalid Input");
+} */
+
+// === 25th question finish!
