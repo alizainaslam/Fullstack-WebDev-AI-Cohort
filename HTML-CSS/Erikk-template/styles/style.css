@@ -375,6 +375,13 @@ p {
   gap: 0.7rem;
 }
 
+footer {
+  background-color: #111;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 0;
+}
+
 @media (min-width: 768px) {
   main {
     padding: 4rem;
