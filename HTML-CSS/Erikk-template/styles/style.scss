@@ -29,6 +29,10 @@ main {
   gap: 3rem;
 }
 
+hr {
+  opacity: 0.6;
+}
+
 h1 {
   font-size: 2.6rem;
   font-weight: 400;
@@ -107,9 +111,6 @@ p {
           text-transform: uppercase;
         }
       }
-      hr {
-        opacity: 0.6;
-      }
     }
   }
 }
@@ -153,9 +154,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  hr {
-    opacity: 0.7;
-  }
+
   .top-container {
     display: flex;
     flex-direction: column;
@@ -252,6 +251,42 @@ p {
   }
   .bottom-container {
     flex-direction: row-reverse;
+  }
+}
+
+// clients
+.clients {
+  width: 100%;
+  .top-container {
+    display: none;
+  }
+  .bottom-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .heading {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .client-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .client {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name {
+          display: flex;
+          align-items: center;
+          gap: 2.5rem;
+        }
+      }
+    }
   }
 }
 
@@ -376,6 +411,24 @@ p {
         }
         .link {
           margin-top: auto;
+        }
+      }
+    }
+  }
+  .clients {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+    .top-container {
+      width: 35%;
+    }
+    .bottom-container {
+      width: 65%;
+      .heading {
+        width: 100%;
+        text-align: right;
+        img {
+          width: 50%;
         }
       }
     }
