@@ -354,6 +354,22 @@ p {
   }
 }
 
+// join-the-team
+.join-the-team {
+  .top-container {
+    display: none;
+  }
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .link {
+      display: flex;
+      gap: 0.7rem;
+    }
+  }
+}
+
 // Responsive
 
 @media (min-width: 768px) {
@@ -508,20 +524,31 @@ p {
       }
     }
     .bottom-container {
-      p{
+      p {
         font-size: 0.9rem;
       }
       flex-wrap: nowrap;
       .team-member {
         flex: 1;
-        .profession{
-          .social{
-            img{
+        .profession {
+          .social {
+            img {
               width: 1.5rem;
             }
           }
         }
       }
+    }
+  }
+  .join-the-team {
+    display: flex;
+    gap: 3rem;
+    .top-container {
+      display: block;
+      width: 50%;
+    }
+    .bottom-container {
+      width: 50%;
     }
   }
 }
