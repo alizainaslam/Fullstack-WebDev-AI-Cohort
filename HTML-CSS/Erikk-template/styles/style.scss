@@ -170,6 +170,9 @@ p {
       flex-direction: column;
       gap: 1rem;
       .item {
+        h2 {
+          margin: 0.9rem 0;
+        }
         p {
           opacity: 0.6;
           font-size: 1.1rem;
@@ -177,7 +180,8 @@ p {
         .link {
           display: flex;
           gap: 0.7rem;
-          margin: 0.9rem 0 0.6rem 0;
+          margin: 0.9rem 0;
+
           p {
             opacity: 1;
           }
@@ -197,6 +201,57 @@ p {
       object-fit: cover;
       object-position: top;
     }
+  }
+}
+
+// selected-work
+.selected-work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .heading {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .top-container,
+  .bottom-container {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    .image-1,
+    .image-2 {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1.2;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .image-1 {
+      display: none;
+    }
+    .text {
+      width: 50%;
+      p {
+        margin: 0.5rem 0;
+        opacity: 0.7;
+        font-size: 1.1rem;
+      }
+      .link {
+        display: flex;
+        gap: 0.7rem;
+        margin-top: auto;
+      }
+    }
+  }
+  .bottom-container {
+    flex-direction: row-reverse;
   }
 }
 
@@ -294,6 +349,34 @@ p {
       img {
         height: 100%;
         width: 100%;
+      }
+    }
+  }
+  .selected-work {
+    .top-container,
+    .bottom-container {
+      width: 100%;
+      .image-1,
+      .image-2 {
+        width: 100%;
+        img {
+          aspect-ratio: 1/1;
+        }
+      }
+      .image-1 {
+        display: block;
+      }
+      .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          font-size: 1.1rem;
+        }
+        .link {
+          margin-top: auto;
+        }
       }
     }
   }
