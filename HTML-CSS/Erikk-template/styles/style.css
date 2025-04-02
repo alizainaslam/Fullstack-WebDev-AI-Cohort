@@ -36,7 +36,14 @@ h1 {
   font-size: 2.6rem;
   font-weight: 400;
   line-height: 1;
-  margin: 1rem 0;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
   text-transform: uppercase;
 }
 
@@ -144,9 +151,59 @@ p {
   font-size: 1.15rem;
 }
 
+.our-services {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.our-services hr {
+  opacity: 0.7;
+}
+.our-services .top-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.our-services .top-container h1 br {
+  display: none;
+}
+.our-services .top-container .service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.our-services .top-container .service-list .item p {
+  opacity: 0.6;
+  font-size: 1.1rem;
+}
+.our-services .top-container .service-list .item .link {
+  display: flex;
+  gap: 0.7rem;
+  margin: 0.9rem 0 0.6rem 0;
+}
+.our-services .top-container .service-list .item .link p {
+  opacity: 1;
+}
+.our-services .top-container .service-list .item .link img {
+  aspect-ratio: 1/1;
+}
+.our-services .bottom-container {
+  width: 100%;
+}
+.our-services .bottom-container img {
+  aspect-ratio: 1/1;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
 @media (min-width: 768px) {
   main {
     padding: 4rem;
+    gap: 5rem;
   }
   h1 {
     font-size: 3.5rem;
@@ -203,6 +260,35 @@ p {
     max-width: 65%;
     padding-top: auto;
   }
+  .our-services {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .our-services .top-container {
+    width: 50%;
+  }
+  .our-services .top-container h1 {
+    font-size: 6rem;
+  }
+  .our-services .top-container h1 br {
+    display: block;
+  }
+  .our-services .top-container .service-list {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .our-services .top-container .service-list .item p {
+    font-size: 1.4rem;
+  }
+  .our-services .bottom-container {
+    width: 50%;
+    aspect-ratio: 1/1.4;
+  }
+  .our-services .bottom-container img {
+    height: 100%;
+    width: 100%;
+  }
 }
 @media (min-width: 1020px) {
   h1 {
@@ -227,5 +313,12 @@ p {
   }
   .services-wrapper .bottom-container .services .service p {
     font-size: 2rem;
+  }
+  .our-services .bottom-container {
+    aspect-ratio: 1/1;
+  }
+  .our-services .bottom-container img {
+    height: 100%;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
