@@ -61,6 +61,24 @@ function handleDelay(fn, delay) {
   setTimeout(fn, delay);
 }
 
-handleDelay(hadnleApiResponse, 5000);
+// handleDelay(hadnleApiResponse, 5000);
 
 // ==== 4th question finish
+
+/* 5️⃣ : Closures & Private Data: Implement a function that generates unique IDs without exposing the internal counter. */
+
+function generateIDs() {
+  let counter = 0;
+  let Uid = 0;
+  return function () {
+    const id = Math.floor(Math.random() * 10);
+    counter++;
+    Uid = id + (counter % 3) * 5 + Math.floor(Math.random() * 10);
+    return Uid;
+  };
+}
+
+const id = generateIDs();
+// console.log(`Unique ID is : ${id()}`);
+
+// ==== 5th question finish
