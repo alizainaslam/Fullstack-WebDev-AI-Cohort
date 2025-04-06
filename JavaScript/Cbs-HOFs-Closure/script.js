@@ -40,6 +40,27 @@ function customMap(arr, fn) {
 const ans = customMap(arr, function (val) {
   return val + 1;
 });
-console.log(ans);
+// console.log(ans);
 
 // ==== 3rd question finish
+
+/* 4️⃣ : Callbacks & Asynchronous JS: Write a function that mimics an API request using setTimeout() and accepts a callback for handling the response. */
+
+async function hadnleApiResponse() {
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  const data = await fetch(url);
+  if (!data) {
+    console.log("Error");
+  } else {
+    jsonData = await data.json();
+    console.log(jsonData);
+  }
+}
+
+function handleDelay(fn, delay) {
+  setTimeout(fn, delay);
+}
+
+handleDelay(hadnleApiResponse, 5000);
+
+// ==== 4th question finish
