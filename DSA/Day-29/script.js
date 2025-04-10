@@ -1,4 +1,4 @@
-// ⚠️ If you want to test this file in to your local or want to excute any function, then uncomment try-catch block of that function.
+// ⚠️ If you want to test this file in to your local or want to excute any function, then un-comment try-catch block of that function.
 
 //  → Math problems :
 
@@ -156,24 +156,72 @@ function greatestNumber(a, b, c) {
 
 // Accept a year and check if it a leap year or not (google to find out what's a leap year).
 
-function isLeepYear(year) {
+function isLeapYear(year) {
   if (isNaN(year)) throw new Error("Input should be a valid number.");
 
-  let isLeep = false;
-
-  year % 4 == 0
-    ? (isLeep = true)
-    : year % 100 == 0 && year % 400 == 0
-    ? (isLeep = true)
-    : (isLeep = false);
-
-  return isLeep;
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return "Leap Year";
+  } else {
+    return "Not a Leap Year";
+  }
 }
 
-try {
-  console.log(isLeepYear(1901));
-  console.log(isLeepYear(2024));
-  console.log(isLeepYear(3104));
+/* try {
+  console.log(isLeapYear(1900));
+  console.log(isLeapYear(2024));
+  console.log(isLeapYear(3104));
 } catch (error) {
   console.error(error.message);
+} */
+
+/* Calculate discount based on purchase amount:
+- amount < 5000 : discount 0%
+- 5000 > amount < 7000 : discount 5%
+- 7000 > amount < 9000 : discount 10%
+- amount > 9000 : discount 20% */
+
+function calculateFinalAmount(amount) {
+  if (isNaN(amount) || amount < 0) throw new Error("Invalid input!");
+
+  let finalAmount = 0;
+  if (amount <= 5000) finalAmount = amount;
+  else if (amount <= 7000) finalAmount = amount - (5 * amount) / 100;
+  else if (amount <= 9000) finalAmount = amount - (10 * amount) / 100;
+  else finalAmount = amount - (20 * amount) / 100;
+
+  return `After discount total amount is: ${finalAmount}`;
 }
+
+/* try {
+  console.log(calculateFinalAmount(6000));
+  console.log(calculateFinalAmount(5700));
+} catch (error) {
+  console.error(error.message);
+} */
+
+/* Calculate electricity bill based on units consumed:
+- First 100 units: Rs. 4.2/unit
+- Next 100 units (101-200): Rs. 6/unit
+- Next 300 units (201-400): Rs. 8/unit
+- Above 400 units: Rs. 13/unit */
+
+function calculateElectricityBill(unit) {
+  if (isNaN(unit) || unit < 0) throw new Error("Invalid Unit!");
+
+  let bill = 0;
+
+  if (unit < 101) bill = unit * 4.2;
+  else if (unit < 201) bill = 100 * 4.2 + (unit - 100) * 6;
+  else if (unit < 401) bill = 100 * 4.2 + 100 * 6 + (unit - 200) * 8;
+  else if (unit > 400) bill = 100 * 4.2 + 100 * 6 + 200 * 8 + (unit - 400) * 13;
+
+  return bill.toFixed(1);
+}
+
+/* try {
+  console.log(calculateElectricityBill(18));
+  console.log(calculateElectricityBill(180));
+  console.log(calculateElectricityBill(1800));
+} catch (error) {
+  console.error(error.message);
+} */
