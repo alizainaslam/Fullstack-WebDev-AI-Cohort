@@ -1,15 +1,16 @@
+// ⚠️ If you want to test this file in to your local or want to excute any function, then uncomment try-catch block of that function.
+
 //  → Math problems :
 
-/* Calculate compound interest using the formula: A = P * (1 + R/N)^(N*T) */
+// Calculate compound interest using the formula: A = P * (1 + R/N)^(N*T)
 
 function calculateCompoundInterest(P, r, n, t) {
-  if (isNaN(P) || isNaN(r) || isNaN(n) || isNaN(t)) {
+  if (isNaN(P) || isNaN(r) || isNaN(n) || isNaN(t))
     throw new Error("Input should be a number.");
-  } else {
-    let A = P * Math.pow(1 + r / n, n * t);
-    let CI = A - P;
-    return CI.toFixed(2);
-  }
+
+  let A = P * Math.pow(1 + r / n, n * t);
+  let CI = A - P;
+  return CI.toFixed(2);
 }
 
 /* try {
@@ -19,10 +20,7 @@ function calculateCompoundInterest(P, r, n, t) {
   console.error(error.message);
 } */
 
-/* Calculate area of a triangle using Heron's formula: A = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 
-Example:
-# Input: a=3, b=4, c=5 -> Output: 6.0
-# Input: a=6, b=8, c=10 -> Output: 24.0 */
+// Calculate area of a triangle using Heron's formula: A = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2.
 
 function calculateAreaOfTriangle(a, b, c) {
   if (isNaN(a) || isNaN(b) || isNaN(c)) {
@@ -45,19 +43,19 @@ try {
   console.error(error.message);
 } */
 
-/* Generate a numeric OTP (One-Time Password) of given length. */
+// Generate a numeric OTP (One-Time Password) of given length.
 
 function generateOTP(length) {
-  if (isNaN(length) || length <= 0) {
+  if (isNaN(length) || length <= 0)
     throw new Error("Length should be a valid number.");
-  } else {
-    let index = 1;
-    for (let i = 0; i < length; i++) {
-      index = index * 10;
-    }
-    let OTP = Math.random(Math.floor) * index + 1000;
-    return Math.trunc(OTP);
+
+  let index = 1;
+  for (let i = 0; i < length; i++) {
+    index = index * 10;
   }
+
+  let OTP = Math.random(Math.floor) * index + 1000;
+  return Math.trunc(OTP);
 }
 
 /* try {
@@ -66,15 +64,13 @@ function generateOTP(length) {
   console.error(error.message);
 } */
 
-/* Calculate the circumference of a circle using the formula: C = 2 * π * r. */
+// Calculate the circumference of a circle using the formula: C = 2 * π * r.
 
 function circumferenceOfCircle(r) {
-  if (isNaN(r) || r <= 0) {
-    throw new Error("Input should be a valid number.");
-  } else {
-    let C = 2 * Math.PI * r;
-    return C.toFixed(4);
-  }
+  if (isNaN(r) || r <= 0) throw new Error("Input should be a valid number.");
+
+  let C = 2 * Math.PI * r;
+  return C.toFixed(4);
 }
 
 /* try {
@@ -86,14 +82,12 @@ function circumferenceOfCircle(r) {
 
 // → IF-ELSE :
 
-/* Accept two numbers and print the greatest among them. */
+// Accept two numbers and print the greatest among them.
 
 function greatestNumber(a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    throw new Error("Input should be a valid number.");
-  } else {
-    return Math.max(a, b);
-  }
+  if (isNaN(a) || isNaN(b)) throw new Error("Input should be a valid number.");
+
+  return Math.max(a, b);
 }
 
 /* try {
@@ -103,18 +97,16 @@ function greatestNumber(a, b) {
   console.error(error.message);
 } */
 
-/* Accept an integer and check whether it is an even number or odd. */
+// Accept an integer and check whether it is an even number or odd.
 
 function isEven(number) {
-  if (isNaN(number)) {
-    throw new Error("Input should be a valid number.");
-  } else {
-    let output;
-    number % 2 == 0
-      ? (output = "It is Even number.")
-      : (output = "It is odd number.");
-    return output;
-  }
+  if (isNaN(number)) throw new Error("Input should be a valid number.");
+
+  let output;
+  number % 2 == 0
+    ? (output = "It is Even number.")
+    : (output = "It is odd number.");
+  return output;
 }
 
 /* try {
@@ -124,18 +116,18 @@ function isEven(number) {
   console.error(error.message);
 } */
 
-/* Accept name and age from the user. Check if the user is a valid voter or not. */
+// Accept name and age from the user. Check if the user is a valid voter or not.
 
 function isValidVoter(name, age) {
-  if (!isNaN(name) || isNaN(age)) {
-    throw new Error("Input should be a valid.");
-  } else {
-    if (age >= 18) {
-      return `${name} is a valid voter.`;
-    } else {
-      return `${name} is not a valid voter.`;
-    }
-  }
+  if (!isNaN(name))
+    throw new Error(`Invalid input: name "${name}" should be a string.`);
+  if (isNaN(age))
+    throw new Error(`Invalid input: age "${age}" should be a valid number.`);
+  let result;
+  age >= 18
+    ? (result = `${name} is a valid voter.`)
+    : (result = `${name} is not a valid voter.`);
+  return result;
 }
 
 /* try {
@@ -145,7 +137,7 @@ function isValidVoter(name, age) {
   console.error(error.message);
 } */
 
-/* Accept three numbers and print the greatest among them */
+// Accept three numbers and print the greatest among them.
 
 function greatestNumber(a, b, c) {
   if (isNaN(a) || isNaN(b) || isNaN(c)) {
@@ -162,28 +154,26 @@ function greatestNumber(a, b, c) {
   console.error(error.message);
 } */
 
-/* Accept a year and check if it a leap year or not (google to find out what's a leap year) */
+// Accept a year and check if it a leap year or not (google to find out what's a leap year).
 
 function isLeepYear(year) {
+  if (isNaN(year)) throw new Error("Input should be a valid number.");
+
   let isLeep = false;
-  if (isNaN(year)) {
-    throw new Error("Input should be a valid number.");
-  } else {
-    if (year % 4 == 0) {
-      isLeep = true;
-    } else if (year % 100 == 0 && year % 400 == 0) {
-      isLeep = true;
-    } else {
-      isLeep = false;
-    }
-  }
+
+  year % 4 == 0
+    ? (isLeep = true)
+    : year % 100 == 0 && year % 400 == 0
+    ? (isLeep = true)
+    : (isLeep = false);
+
   return isLeep;
 }
 
-/* try {
+try {
   console.log(isLeepYear(1901));
   console.log(isLeepYear(2024));
-  console.log(isLeepYear(3101));
+  console.log(isLeepYear(3104));
 } catch (error) {
   console.error(error.message);
-} */
+}
