@@ -225,3 +225,39 @@ function calculateElectricityBill(unit) {
 } catch (error) {
   console.error(error.message);
 } */
+
+/* Day 29 Assignment :
+  1.  Problem Statement: Indian Currency Notes Breakdown */
+
+let totalAmount = 4327;
+const notesBreakdown = {};
+
+function getNoteCount(currentAmount, noteValue) {
+  if (
+    isNaN(currentAmount) ||
+    isNaN(noteValue) ||
+    currentAmount <= 0 ||
+    noteValue <= 0
+  )
+    throw new Error("Bhai paisa kama lye plz");
+
+  if (currentAmount >= noteValue) {
+    let leftoverAmount = currentAmount % noteValue;
+    let numberOfNotes = (currentAmount - leftoverAmount) / noteValue;
+    totalAmount = leftoverAmount;
+    return (notesBreakdown[noteValue] = numberOfNotes);
+  }
+}
+if (totalAmount >= 2000) getNoteCount(totalAmount, 2000);
+if (totalAmount >= 500) getNoteCount(totalAmount, 500);
+if (totalAmount >= 200) getNoteCount(totalAmount, 200);
+if (totalAmount >= 100) getNoteCount(totalAmount, 100);
+if (totalAmount >= 50) getNoteCount(totalAmount, 50);
+if (totalAmount >= 20) getNoteCount(totalAmount, 20);
+if (totalAmount >= 10) getNoteCount(totalAmount, 10);
+if (totalAmount >= 5) getNoteCount(totalAmount, 5);
+if (totalAmount >= 3) getNoteCount(totalAmount, 3);
+if (totalAmount >= 2) getNoteCount(totalAmount, 2);
+if (totalAmount >= 1) getNoteCount(totalAmount, 1);
+
+console.log(notesBreakdown);
