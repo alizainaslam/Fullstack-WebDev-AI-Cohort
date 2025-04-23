@@ -260,4 +260,38 @@ if (totalAmount >= 3) getNoteCount(totalAmount, 3);
 if (totalAmount >= 2) getNoteCount(totalAmount, 2);
 if (totalAmount >= 1) getNoteCount(totalAmount, 1);
 
-console.log(notesBreakdown);
+// console.log(notesBreakdown);
+
+/* 2 .Write a program to accept rating of the movie as double and Movie name as String.  */
+
+let movieName = "RRR";
+let movieRating = 5;
+let checkMovieRating = checkMovieRatings(movieName, movieRating);
+// console.log(checkMovieRating);
+
+function checkMovieRatings(name, rating) {
+  if (typeof name !== "string" || typeof rating !== "number")
+    throw new Error("Invalid input");
+  if (rating < 0 || rating > 5) throw new Error(`Invalid ${rating}`);
+  if (rating >= 0.0 && rating <= 2.0) return `${name} is Flop.`;
+  if (rating >= 2.1 && rating <= 3.4) return `${name} is Semi-hit.`;
+  if (rating >= 3.5 && rating <= 4.5) return `${name} is Hit.`;
+  else return `${name} is Super Hit.`;
+}
+
+/* 3.  Write a program to calculate the salary. */
+
+let YOS = 10;
+let salary = 15000;
+
+let calculateSalary = calculateTotalSalary(YOS, salary);
+// console.log(calculateSalary);
+
+function calculateTotalSalary(yos, salary) {
+  if (typeof yos !== "number" || typeof salary !== "number") {
+    throw new Error("Invalid input");
+  } else {
+    let totalSalary = salary * 12 * yos;
+    return totalSalary;
+  }
+}
