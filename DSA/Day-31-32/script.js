@@ -115,3 +115,44 @@ while (countOfNumber > 0) {
 
 // if (sumOfISBN % 11 === 0) console.log(isValidISBN);
 // else console.log((isValidISBN = false));
+
+// 2. HCF/GCD
+
+let input1 = 18;
+let input2 = 12;
+// findHCFVerbose(input1, input2);
+
+function getFactors(int) {
+  if (isNaN(int) || int < 2) throw new Error("Invalid Input");
+  let factors = [];
+  for (let i = 0; i <= int / 2; i++) {
+    if (int % i === 0) {
+      factors.push(i);
+    }
+  }
+  return factors;
+}
+
+function findHCFVerbose(a, b) {
+  let factorsA = getFactors(a);
+  let factorsB = getFactors(b);
+  let common = factorsA.filter((value) => factorsB.includes(value));
+  let hcf = Math.max(...common);
+  console.log(`HCF is:`, hcf);
+  return hcf;
+}
+
+// 3. Harshad Number
+let hInput = parseInt(1375);
+console.log(harshadNumber(hInput));
+
+function harshadNumber(a) {
+  if (isNaN(a) || a < 10) throw new Error("Invalid Input");
+  let copy = a;
+  let sumOfInput = 0;
+  while (copy > 0) {
+    sumOfInput += copy % 10;
+    copy = Math.floor(copy / 10);
+  }
+  return a % sumOfInput === 0;
+}
