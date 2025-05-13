@@ -144,7 +144,7 @@ function findHCFVerbose(a, b) {
 
 // 3. Harshad Number
 let hInput = parseInt(1375);
-console.log(harshadNumber(hInput));
+// console.log(harshadNumber(hInput));
 
 function harshadNumber(a) {
   if (isNaN(a) || a < 10) throw new Error("Invalid Input");
@@ -156,3 +156,31 @@ function harshadNumber(a) {
   }
   return a % sumOfInput === 0;
 }
+
+//  4. Perfect Square
+
+let inp = Number(25);
+let root = Math.sqrt(inp);
+let isPerfectSqr = true;
+if (Number.isInteger(root)) {
+  isPerfectSqr;
+} else {
+  isPerfectSqr = false;
+}
+// console.log(isPerfectSqr);
+
+//  5. Abundant Number
+
+let abundantNumber = Number(12);
+let sumOfAbundant = 0;
+
+for (let i = 1; i <= abundantNumber / 2; i++) {
+  if (abundantNumber % i === 0) {
+    sumOfAbundant += i;
+  }
+}
+// if (sumOfAbundant > abundantNumber) {
+//   console.log(false);
+// } else {
+//   console.log(true);
+// }
