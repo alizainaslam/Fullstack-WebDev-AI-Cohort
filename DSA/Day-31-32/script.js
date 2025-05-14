@@ -184,3 +184,17 @@ for (let i = 1; i <= abundantNumber / 2; i++) {
 // } else {
 //   console.log(true);
 // }
+
+// 6. Fibonacci Series using Loop
+let fibNum = Number(6);
+// console.log(fibonacciSeries(fibNum));
+
+function fibonacciSeries(n) {
+  if (isNaN(n) || n < 0) throw new Error("Invalid Input");
+
+  let fib = [0, 1];
+  for (let i = 2; i < n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  return fib;
+}
