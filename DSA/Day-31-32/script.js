@@ -198,3 +198,84 @@ function fibonacciSeries(n) {
   }
   return fib;
 }
+
+// 7. Find Numbers with Exactly X Divisors
+let xDivisor = 3;
+let maxNumber = 50;
+// findNumbersWithXDivisors(xDivisor, maxNumber);
+
+function findNumbersWithXDivisors(xDivisor, maxNumber) {
+  if (isNaN(xDivisor) || isNaN(maxNumber)) throw new Error("Invalid Input");
+
+  for (let i = 1; i < maxNumber; i++) {
+    let count = 0;
+    for (let j = 1; j <= i; j++) {
+      if (i % j === 0) {
+        count++;
+      }
+    }
+    if (count === xDivisor) {
+      console.log(i);
+    }
+  }
+}
+
+//  8. Prime Factors
+let fInput = 30;
+// findPrimeFactors(fInput);
+
+function findPrimeFactors(number) {
+  if (isNaN(number) || number < 1) throw new Error("Invalid Input");
+  if (number == 1) console.log("Not Prime");
+  for (let i = 2; i <= number / 2; i++) {
+    if (number % i === 0) {
+      let isPrime = true;
+      for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) {
+        console.log(i);
+      }
+    }
+  }
+}
+
+// 9. Calculate Area using Switch Statement
+let choice = false; // Updae choice
+let radius = 5;
+let rectangle = 13;
+let triangleBase = 5;
+let triangleHeight = 3;
+
+switch (choice) {
+  case "circle":
+    let areaOfCircle = Math.PI * (radius * radius);
+    console.log(areaOfCircle.toFixed(1));
+    break;
+  case "rectangle":
+    let areaOfrectangle = rectangle * rectangle;
+    console.log(areaOfrectangle.toFixed(1));
+    break;
+  case "triangle":
+    let areaOfTriangle = (triangleBase * triangleHeight) / 2;
+    console.log(areaOfTriangle.toFixed(1));
+    break;
+  default:
+    // console.log("Something Invalid");
+    break;
+}
+
+// 10. Neon Number
+let neonNumber = parseInt(90);
+let neonSqr = Math.pow(neonNumber, 2);
+let copyOfNeonSqr = neonSqr;
+let sumOfNeonSqr = 0;
+while (copyOfNeonSqr > 0) {
+  sumOfNeonSqr += copyOfNeonSqr % 10;
+  copyOfNeonSqr = Math.floor(copyOfNeonSqr / 10);
+}
+// if (neonNumber == sumOfNeonSqr) console.log(true);
+// else console.log(false);
