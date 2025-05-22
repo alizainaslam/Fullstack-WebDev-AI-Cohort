@@ -279,3 +279,105 @@ while (copyOfNeonSqr > 0) {
 }
 // if (neonNumber == sumOfNeonSqr) console.log(true);
 // else console.log(false);
+
+// 11. Sum of Even Indexed Fibonacci Numbers
+let num = parseInt(4);
+// sumOfEvenIndexOfFibb(num);
+
+function sumOfEvenIndexOfFibb(num) {
+  if (isNaN(num) || num < 0) throw new Error("Invalid Input");
+
+  let limit = num * 2;
+  let sumOfEvenIndOfFib = 0;
+  let fib = [0, 1];
+  for (let i = 2; i <= limit; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  for (let i = 0; i <= limit; i++) {
+    if (i % 2 == 0) {
+      sumOfEvenIndOfFib += fib[i];
+    }
+  }
+  return sumOfEvenIndOfFib;
+}
+
+// 12. Find the Largest Digit in a Number
+let givenNumber = parseInt(54829);
+// largestDigit(givenNumber);
+
+function largestDigit(num) {
+  if (isNaN(num)) throw new Error("Invalid Input!");
+  let isLargestNum = 0;
+  while (givenNumber > 0) {
+    let num = givenNumber % 10;
+    if (num > isLargestNum) {
+      isLargestNum = num;
+    }
+    givenNumber = Math.floor(givenNumber / 10);
+  }
+  console.log(isLargestNum);
+}
+
+// 13. Find LCM of Two Numbers
+let a = 12;
+let b = 15;
+// console.log(lcm(a, b));
+
+function gcd(a, b) {
+  while (b !== 0) {
+    [a, b] = [b, a % b];
+  }
+  return a;
+}
+
+function lcm(a, b) {
+  return Math.abs(a * b) / gcd(a, b);
+}
+
+// 14. Find the Sum of Even Digits in a Number
+let gNumber = parseInt(2384);
+let sumOfEven = 0;
+while (gNumber > 0) {
+  let num = gNumber % 10;
+  if (num % 2 == 0) {
+    sumOfEven += num;
+  }
+  gNumber = Math.floor(gNumber / 10);
+}
+// console.log(sumOfEven);
+
+// 15. Number of Days in a Month
+let inputMonth = 12;
+let inputYear = 2018;
+
+function isLeapYear(year) {
+  if (isNaN(year)) throw new Error("Invalid Input");
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+function getDaysInMonth(month, year) {
+  const monthIndex = month - 1;
+  if (monthIndex < 0 || monthIndex > 11) {
+    return "Invalid Input";
+  }
+
+  const daysInMonth = [
+    31,
+    isLeapYear(year) ? 29 : 28,
+    31,
+    30,
+    31,
+    30,
+    31,
+    31,
+    30,
+    31,
+    30,
+    31,
+  ];
+
+  return daysInMonth[monthIndex];
+}
+
+const days = getDaysInMonth(inputMonth, inputYear);
+console.log(days);
