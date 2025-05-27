@@ -33,3 +33,26 @@ for (let i = 1; i <= 5; i++) {
   temp--;
   //   console.log();
 }
+
+// Q 39. Right-Aligned Half Pyramid of Stars
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5 - i; j++) {
+    // process.stdout.write("  ");
+  }
+  for (let k = 1; k <= i; k++) {
+    // process.stdout.write("* ");
+  }
+  // console.log();
+}
+
+//  Q 40. Left-Aligned Half Pyramid of Stars
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= i; j++) {
+    // process.stdout.write("* ");
+  }
+  for (let k = 1; k <= 5 - i; k++) {
+    // process.stdout.write("  ");
+  }
+
+  // console.log();
+}
