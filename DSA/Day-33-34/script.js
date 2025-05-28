@@ -56,3 +56,27 @@ for (let i = 1; i <= 5; i++) {
 
   // console.log();
 }
+
+// Q 41. X Pattern
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i == j || i + j == 5 + 1) {
+      // process.stdout.write("*");
+    } else {
+      // process.stdout.write(" ");
+    }
+  }
+  // console.log();
+}
+
+// Q 42. V Pattern
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 10 - 1; j++) {
+    if (i == j || i + j == 10) {
+      // process.stdout.write("*");
+    } else {
+      // process.stdout.write(" ");
+    }
+  }
+  // console.log();
+}
