@@ -89,3 +89,24 @@ while (k < zeroRotation.length) {
 }
 // console.log(zeroRotation);
 
+//  Q 51. Array left Rotation by 1
+const arrays = [1, 2, 3, 4, 5];
+let tempo = arrays[0];
+let m = 0;
+while (m < arrays.length - 1) {
+  arrays[m] = arrays[m + 1];
+  m++;
+}
+arrays[arrays.length - 1] = tempo;
+// console.log(arrays);
+
+//  Q 52. Array right Rotation by 1
+const arrayss = [1, 2, 3, 4, 5];
+let tempr = arrayss[arrayss.length - 1];
+let n = arrayss.length - 1;
+while (n > 0) {
+  arrayss[n] = arrayss[n - 1];
+  n--;
+}
+arrayss[0] = tempr;
+// console.log(arrayss);
