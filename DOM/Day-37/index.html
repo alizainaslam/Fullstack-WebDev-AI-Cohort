@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friend Request Card</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #010101;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 3rem 0rem;
+      width: 240px;
+      background-color: #ffff;
+      border-radius: 0.5rem;
+      .tag {
+        color: red;
+      }
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      button {
+        background-color: rgb(0, 132, 255);
+        color: #ffff;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+  </style>
+  <body>
+    <div class="card">
+      <div class="profile-img">
+        <img
+          src="https://images.unsplash.com/photo-1725866546799-4cc16f6cba23?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE1BTiUyMERFVkVMT1BFUnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="profile-img"
+        />
+      </div>
+      <h1>Zain</h1>
+      <h3 class="tag">Stranger</h3>
+      <button>Send Request</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
