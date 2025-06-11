@@ -16,4 +16,4 @@ function handleUserAttraction() {
     isFriend = false;
   }
 }
-button.addEventListener("click", handleUserAttraction);
+button.addEventListener("click", handleUserAttraction)
