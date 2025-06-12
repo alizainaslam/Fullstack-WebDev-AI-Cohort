@@ -16,37 +16,52 @@
         height: 100%;
         width: 100%;
       }
-      body {
+      .flex-column {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        button {
-          width: fit-content;
-          background-color: rgba(0, 157, 255, 0.918);
-          color: #fff;
-          padding: 0.4rem 1rem;
-          font-size: 1.2rem;
-          outline: none;
-          border: none;
+      }
+      button {
+        width: fit-content;
+        background-color: rgba(0, 157, 255, 0.918);
+        color: #fff;
+        padding: 0.4rem 1rem;
+        font-size: 1.2rem;
+        outline: none;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+      }
+      .card {
+        height: 50%;
+        width: 100%;
+        background-color: black;
+      }
+      .guess-game {
+        background-color: #fff;
+        padding: 0 5%;
+        .result {
+          height: 50px;
+          width: 120px;
+          background-color: rgb(241, 237, 237);
+          text-align: center;
+          margin: 2rem 0rem;
           border-radius: 0.25rem;
-          cursor: pointer;
-        }
-        .color-card {
-          height: 33.33%;
-          width: 100%;
-          background-color: black;
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
       }
     </style>
   </head>
-  <body>
+  <body class="flex-column">
     <!-- Random color generator -->
-    <div class="color-card">
+    <div class="color-card card flex-column">
       <button class="color-generator">Change background color</button>
+    </div>
+    <!--  -->
+    <div class="guess-game card flex-column">
+      <h1>Who will be the WINNER of IPL 2026</h1>
+      <h2 class="result flex-column">- - -</h2>
+      <button class="guess-btn">Guess the winner</button>
     </div>
     <script src="script.js"></script>
   </body>
