@@ -110,3 +110,35 @@ while (n > 0) {
 }
 arrayss[0] = tempr;
 // console.log(arrayss);
+
+// Q 53. Calculate Sum and Mean of Array Elements
+
+function calculateSumAndMean(arr, n) {
+  let sumOfArr = 0;
+  for (let i = 0; i < n; i++) {
+    sumOfArr += arr[i];
+  }
+  let mean = sumOfArr / n;
+  return [sumOfArr, mean.toFixed(1)];
+}
+// console.log(calculateSumAndMean(arrays, 3));
+
+// Q 54. Find the Greatest Element and Its Index
+const arr = [10, 23, 45, 67, 89];
+let maxElem = arr[0];
+let maxIndex = 0;
+for (let i = 0; i <= arr.length; i++) {
+  if (arr[i] > maxElem) {
+    maxElem = arr[i];
+    maxIndex = i;
+  }
+}
+// console.log(maxElem, maxIndex);
+
+let abc = [1, 2, 3, 4, 5];
+let v = abc.length;
+for (let i = 0; i < v - 1; i++) {
+  abc[i] = abc[i + 1];
+}
+abc.length= v - 1;
+console.log(abc);
