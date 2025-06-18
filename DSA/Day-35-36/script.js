@@ -135,10 +135,33 @@ for (let i = 0; i <= arr.length; i++) {
 }
 // console.log(maxElem, maxIndex);
 
-let abc = [1, 2, 3, 4, 5];
-let v = abc.length;
-for (let i = 0; i < v - 1; i++) {
-  abc[i] = abc[i + 1];
+// Q 55. Copy Array and Reverse
+const arrForRev = [1, 2, 3, 4, 5];
+function copyAndReverseArray(arr) {
+  let copyOfArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    copyOfArr.push(arr[i]);
+  }
+  return copyOfArr;
 }
-abc.length= v - 1;
-console.log(abc);
+
+// Q 56. Array reverse wihtout using extra space
+function reverseArrayInPlace(arr) {
+  // Write your logic here
+  let left = 0,
+    right = arr.length - 1;
+  while (left < right) {
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+    left++;
+    right--;
+  }
+}
+
+// Q 57. Array left rotation by 1
+function leftRotateByOne(arr) {
+  let temp = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i + 1];
+  }
+  arr[arr.length - 1] = temp;
+}
