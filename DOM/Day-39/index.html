@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Download / progress bar</title>
+  </head>
+  <body class="h-screen flex items-center justify-center bg-black">
+    <div
+      class="download-bar h-[170px] w-[350px] bg-white rounded-lg px-[20px] py-[30px] flex flex-col justify-between"
+    >
+      <div class="progress-bar bg-gray-300 h-[25px] w-full rounded-xl">
+        <div class="fill-bar w-0 h-full rounded-xl bg-green-500"></div>
+      </div>
+      <h4 class="percent flex justify-end">0%</h4>
+      <div class="cta flex justify-between mt-2">
+        <h2>mp3</h2>
+        <button
+          class="download-btn bg-blue-500 text-white px-[12px] py-[5px] cursor-pointer rounded"
+        >
+          Download
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
