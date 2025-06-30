@@ -51,3 +51,34 @@ for (let i = 0; i < unSortedArr.length - 1; i++) {
 }
 
 // console.log(unSortedArr);
+
+// Q. Insertion sort
+let unSortedArray = [5, 2, 9, 1, 5, 6];
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    for (let j = i - 1; j >= 0; j--) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+// console.log(insertionSort(unSortedArray));
+
+// Q. Selection sort
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+      if (minIndex != i) {
+        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+      }
+    }
+  }
+  return arr;
+}
+// console.log(selectionSort(unSortedArray));
