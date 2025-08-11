@@ -55,8 +55,8 @@ main {
 }
 .cursor-dot {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   background-color: #f1f1f1;
   mix-blend-mode: difference;
   border-radius: 50%;
@@ -77,7 +77,6 @@ main {
   gap: 20px;
   color: #0a0a0a;
 }
-
 .user-profile,
 .post-interactions {
   display: flex;
@@ -107,11 +106,39 @@ main {
   height: 30px;
   width: 30px;
 }
-.like-btn {
+.like-btn,
+.red-heart {
   height: 35px;
   width: 40px;
 }
 .comment-btn,
 .like-btn {
   cursor: pointer;
+}
+.post-img {
+  position: relative;
+  overflow: hidden;
+}
+.red-heart {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(4);
+  opacity: 0;
+}
+
+.show-heart {
+  opacity: 1;
+  animation: pop-heart 0.4s;
+}
+.heart-upside {
+  transform: translateY(-900%) scale(4);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes pop-heart {
+  0% {
+    rotate: -20deg;
+    transform: scale(2);
+  }
 }
