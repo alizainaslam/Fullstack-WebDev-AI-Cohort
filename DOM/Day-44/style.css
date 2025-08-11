@@ -63,3 +63,55 @@ main {
   pointer-events: none;
   transition: all linear 0.2s;
 }
+
+.card {
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  gap: 20px;
+  color: #0a0a0a;
+}
+
+.user-profile,
+.post-interactions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 20px;
+}
+.user-profile-img {
+  height: 50px;
+  width: 50px;
+}
+.user-name h2 {
+  font-size: 16px;
+}
+.user-profile-img img {
+  border-radius: 50%;
+  object-position: top;
+}
+.card * img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+.comment-btn {
+  height: 30px;
+  width: 30px;
+}
+.like-btn {
+  height: 35px;
+  width: 40px;
+}
+.comment-btn,
+.like-btn {
+  cursor: pointer;
+}
