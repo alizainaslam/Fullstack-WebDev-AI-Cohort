@@ -88,4 +88,71 @@ for (let i = 0; i < splitSentence.length; i++) {
     tempArray.push(newWord);
   }
 }
-console.log(tempArray.join(" "));
+// console.log(tempArray.join(" "));
+
+// 61.- Accept a string and print the frequency of each character present in the string
+const charFreqInput = "kabhi khushi kabhi ghum".toLowerCase();
+
+function characterFrequency(str) {
+  let tempArray = new Array(123).fill(0);
+  for (let i = 0; i < str.length; i++) {
+    let ascii = str[i].charCodeAt();
+    if (ascii !== 32) {
+      tempArray[ascii] = tempArray[ascii] + 1;
+    }
+  }
+  for (let i = 0; i < tempArray.length; i++) {
+    if (tempArray[i] > 0) {
+      console.log(String.fromCharCode(i) + ": " + tempArray[i]);
+    }
+  }
+}
+// characterFrequency(charFreqInput);
+
+// Q 62. Check Two Strings are Anagram or Not Anagrams words have the same word length & same character count Examples of anagram words are arc and car, state and taste, night and thing etc.
+let s1 = "thing",
+  s2 = "night";
+
+function isAnagram(s1, s2) {
+  if (s1.length !== s2.length) {
+    return "Strings are not anagrams";
+  } else {
+    let isAnagram = true;
+    let frequencyArr = new Array(123).fill(0);
+
+    for (let i = 0; i < s1.length; i++) {
+      let ascii = s1[i].charCodeAt();
+      frequencyArr[ascii]++;
+      frequencyArr[ascii]--;
+    }
+
+    for (let i = 0; i < frequencyArr.length; i++) {
+      if (frequencyArr[i] > 0) {
+        isAnagram = false;
+        return isAnagram;
+      }
+    }
+    if (isAnagram) return isAnagram;
+  }
+}
+// console.log(isAnagram(s1, s2));
+
+// Jewels and Stones
+
+let jewels = "z",
+  stones = "ZZ";
+function numJewelsInStones(jewels, stones) {
+  if (1 < jewels.length || stones.length > 50) return "Input length!";
+  let uniqueJewels = new Set(jewels);
+  let index = 0;
+  for (let i = 0; i < stones.length; i++) {
+    for (const char of uniqueJewels) {
+      if (stones[i] == char) {
+        index++;
+      }
+    }
+  }
+  return index;
+}
+// console.log(numJewelsInStones(jewels, stones));
+
