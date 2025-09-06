@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #010101;
+      }
+      main {
+        padding: 0 10px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center py-8 sm:py-12">
+    <main class="w-full max-w-3xl">
+      <!-- Search Box -->
+      <div
+        class="w-full bg-slate-800/70 backdrop-blur-md shadow-2xl rounded-2xl p-6 sm:p-8 border border-slate-700"
+      >
+        <h1
+          class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide text-center"
+        >
+          GitHub Profile Finder
+        </h1>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input
+            type="text"
+            placeholder="Enter GitHub username..."
+            required
+            class="user-input flex-1 px-4 py-3 rounded-xl bg-slate-900 text-white placeholder-slate-400 border border-slate-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <button
+            type="submit"
+            class="search-btn px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition shadow-lg"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- Profile Card -->
+      <div
+        class="user-profile w-full bg-slate-800/80 backdrop-blur-md shadow-2xl rounded-2xl mt-8 sm:mt-12 overflow-hidden border border-slate-700 min-h-[100px]"
+      ></div>
+    </main>
+    <h2 class="text-slate-700 text-lg my-10">Made with love 💖</h2>
+    <script src="script.js"></script>
+  </body>
+</html>
