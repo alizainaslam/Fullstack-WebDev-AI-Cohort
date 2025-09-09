@@ -1,6 +1,9 @@
 const userInput = element$(".user-input"),
   searchBtn = element$(".search-btn"),
-  userProfileCard = element$(".user-profile");
+  userProfileCard = element$(".user-profile"),
+  dropDownUser = element$(".drop-down-user"),
+  usersList = element$(".users-list");
+const lists = document.querySelectorAll("li");
 
 function element$(cls) {
   return document.querySelector(cls);
@@ -111,7 +114,32 @@ function handleUserInfo(username) {
       .catch((err) => alert("User not found."));
   }
   username.value = null;
+  dropDownUser.style.display = "none";
 }
+
+userInput.addEventListener("input", (ev) => {
+  dropDownUser.style.display = "block";
+  userQuery(ev.target.value)
+    .then((msg) => {
+      usersList.innerHTML = "";
+      msg.items.forEach((item) => {
+        usersList.innerHTML += `<li class="hover:bg-slate-900 transition py-2 px-4">
+                  ${item.login}
+                </li>`;
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+usersList.addEventListener("click", (ev) => {
+  if (ev.target.tagName === "LI") {
+    userInput.value = ev.target.innerText;
+    dropDownUser.style.display = "none";
+  }
+});
+
 searchBtn.addEventListener("click", () => handleUserInfo(userInput));
 
 window.addEventListener("keypress", (ev) => {
@@ -119,3 +147,15 @@ window.addEventListener("keypress", (ev) => {
     handleUserInfo(userInput);
   }
 });
+
+function userQuery(username) {
+  return fetch(
+    `https://api.github.com/search/users?q=${username}&per_page=5`
+  ).then((raw) => {
+    if (!raw.ok) {
+      throw new Error("Something went wrong!");
+    } else {
+      return raw.json();
+    }
+  });
+}

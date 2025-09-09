@@ -26,12 +26,20 @@
           GitHub Profile Finder
         </h1>
         <div class="flex flex-col sm:flex-row gap-3">
-          <input
-            type="text"
-            placeholder="Enter GitHub username..."
-            required
-            class="user-input flex-1 px-4 py-3 rounded-xl bg-slate-900 text-white placeholder-slate-400 border border-slate-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          />
+          <div class="input-container w-full relative">
+            <input
+              type="text"
+              placeholder="Enter GitHub username..."
+              required
+              class="user-input w-full flex-1 px-4 py-3 rounded-xl bg-slate-900 text-white placeholder-slate-400 border border-slate-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+            <div
+              class="drop-down-user bg-slate-800 rounded-bl-xl rounded-br-xl text-white absolute z-10 w-full hidden"
+            >
+              <ul class="users-list flex flex-col">
+              </ul>
+            </div>
+          </div>
           <button
             type="submit"
             class="search-btn px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition shadow-lg"
@@ -43,7 +51,7 @@
 
       <!-- Profile Card -->
       <div
-        class="user-profile w-full bg-slate-800/80 backdrop-blur-md shadow-2xl rounded-2xl mt-8 sm:mt-12 overflow-hidden border border-slate-700 min-h-[100px]"
+        class="user-profile w-full bg-slate-800/80 shadow-2xl rounded-2xl mt-8 sm:mt-12 overflow-hidden"
       ></div>
     </main>
     <h2 class="text-slate-700 text-lg my-10">Made with love 💖</h2>
