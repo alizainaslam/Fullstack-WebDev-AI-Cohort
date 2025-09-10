@@ -3,7 +3,6 @@ const userInput = element$(".user-input"),
   userProfileCard = element$(".user-profile"),
   dropDownUser = element$(".drop-down-user"),
   usersList = element$(".users-list");
-const lists = document.querySelectorAll("li");
 
 function element$(cls) {
   return document.querySelector(cls);
@@ -116,21 +115,35 @@ function handleUserInfo(username) {
   username.value = null;
   dropDownUser.style.display = "none";
 }
-
+function userQuery(username) {
+  return fetch(
+    `https://api.github.com/search/users?q=${username}&per_page=5`
+  ).then((raw) => {
+    if (!raw.ok) {
+      throw new Error("Something went wrong!");
+    } else {
+      return raw.json();
+    }
+  });
+}
+let timerId;
 userInput.addEventListener("input", (ev) => {
+  clearTimeout(timerId);
   dropDownUser.style.display = "block";
-  userQuery(ev.target.value)
-    .then((msg) => {
-      usersList.innerHTML = "";
-      msg.items.forEach((item) => {
-        usersList.innerHTML += `<li class="hover:bg-slate-900 transition py-2 px-4">
+  timerId = setTimeout(() => {
+    userQuery(ev.target.value)
+      .then((msg) => {
+        usersList.innerHTML = "";
+        msg.items.forEach((item) => {
+          usersList.innerHTML += `<li class="hover:bg-slate-900 transition py-2 px-4 cursor-pointer">
                   ${item.login}
                 </li>`;
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  }, 300);
 });
 
 usersList.addEventListener("click", (ev) => {
@@ -147,15 +160,3 @@ window.addEventListener("keypress", (ev) => {
     handleUserInfo(userInput);
   }
 });
-
-function userQuery(username) {
-  return fetch(
-    `https://api.github.com/search/users?q=${username}&per_page=5`
-  ).then((raw) => {
-    if (!raw.ok) {
-      throw new Error("Something went wrong!");
-    } else {
-      return raw.json();
-    }
-  });
-}
