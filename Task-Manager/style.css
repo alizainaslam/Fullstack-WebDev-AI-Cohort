@@ -1,0 +1,59 @@
+:root {
+  --pri: #f2f2f2;
+  --sec: #020202;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: var(--pri);
+  color: var(--sec);
+  font-family: Arial, sans-serif;
+}
+h1 {
+  font-size: 25px;
+}
+main {
+  width: 100%;
+}
+/* all-elems */
+.all-elems {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+.elem {
+  margin: 0 auto;
+  height: 300px;
+  width: 250px;
+  position: relative;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.elem h1 {
+  position: absolute;
+  top: 90%;
+  z-index: 1000;
+  right: 10px;
+  color: var(--pri);
+  font-size: 18px;
+}
+.elem:active {
+  scale: 0.9;
+}
