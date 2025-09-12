@@ -1,6 +1,10 @@
+const form = document.querySelector("form");
+const inputTask = document.querySelector(".input-task");
+const inputDetails = document.querySelector(".input-details");
+
 function openFeatures() {
   const allElem = document.querySelectorAll(".elem");
-  const elemPage = document.querySelectorAll(".elm-page");
+  const elemPage = document.querySelectorAll(".feature");
   const closePageBtn = document.querySelectorAll(".ri-close-line");
 
   allElem.forEach((elem) => {
@@ -15,4 +19,9 @@ function openFeatures() {
     });
   });
 }
-openFeatures()
+openFeatures();
+
+form.addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  console.log(inputTask.value, inputDetails.value);
+});

@@ -51,23 +51,57 @@
         </div>
       </section>
       <!-- Pages -->
-      <section class="to-do elm-page">
+      <section class="to-do-page feature">
         <h1>To Do</h1>
         <i class="ri-close-line" id="0"></i>
+
+        <div class="task-container">
+          <div class="add-task">
+            <form>
+              <input type="text" placeholder="I want to..." required class="input-task"/>
+              <textarea
+                name="details"
+                id="details"
+                cols="3"
+                placeholder="Add details"
+                class="input-details"
+              ></textarea>
+              <div class="mark-importent">
+                <input type="checkbox" name="importent" id="importent" />
+                <label for="importent">Mark as importent</label>
+              </div>
+              <input type="submit" value="Add Task" class="submit-btn" />
+            </form>
+          </div>
+          <div class="task-list">
+            <div class="task">
+              <p>Task list</p>
+              <button>Mark as completed</button>
+            </div>
+            <div class="task">
+              <p>Task list</p>
+              <button>Mark as completed</button>
+            </div>
+            <div class="task">
+              <p>Task list</p>
+              <button>Mark as completed</button>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="dai elm-page">
+      <section class="daily-palanner-page feature">
         <h1>Daily Planner</h1>
         <i class="ri-close-line" id="1"></i>
       </section>
-      <section class="moti elm-page">
+      <section class="motivational-page feature">
         <h1>Motivation</h1>
         <i class="ri-close-line" id="2"></i>
       </section>
-      <section class="pomo elm-page">
+      <section class="pomodoro-page feature">
         <h1>Pomodoro Timer</h1>
         <i class="ri-close-line" id="3"></i>
       </section>
-      <section class="daily elm-page">
+      <section class="daily-goals-page feature">
         <h1>Daily Goals</h1>
         <i class="ri-close-line" id="4"></i>
       </section>
