@@ -102,27 +102,35 @@ main * {
 }
 
 /* features - to-do-page */
-
+.to-do-page {
+  display: block;
+}
 .to-do-page .task-container {
   width: var(--full-width);
   height: 85%;
   margin-top: 25px;
-  background-color: var(--off-white);
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
-  box-shadow: 0px 2px 10px rgba(128, 128, 128, 0.221);
 }
 .to-do-page .task-container .add-task {
   width: 34%;
 }
 .to-do-page .task-container .task-list {
   width: 64%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.to-do-page .task-container .task-list::-webkit-scrollbar {
+  display: none;
 }
 .to-do-page .task-container .task-list,
 .add-task {
+  background-color: var(--off-white);
+
   height: var(--full-height);
-  background-color: var(--pri);
   border-radius: 10px;
 }
 .to-do-page .task-container .add-task form {
@@ -175,7 +183,7 @@ input[type="submit"] {
   height: fit-content;
   background-color: var(--accent);
   color: var(--pri);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
   margin-left: 20px;
   margin-right: 20px;
@@ -188,4 +196,23 @@ input[type="submit"] {
   color: var(--sec);
   background-color: var(--pri);
   cursor: pointer;
+  font-size: 20px;
+}
+.to-do-page .task-container .task-list .task p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.to-do-page .task-container .task-list .task p span {
+  font-size: 10px;
+  background-color: red;
+  padding: 3px 6px;
+  border-radius: 10px;
+}
+.task-list .task p span.true {
+  opacity: 1;
+}
+.task-list .task p span.false {
+  opacity: 0;
 }
