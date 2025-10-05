@@ -1,16 +1,11 @@
 const Read = (props) => {
-  const userdata = props.username.map((user, idx) => {
-    return (
-      <ol key={idx}>
-        <p>Username: {user.name}</p>
-        <span>userage: {user.age}</span>
-      </ol>
-    );
-  });
+  const task = props.task;
+  const taskList = task.map((task) => <li key={task.id}>{task.title}</li>);
+
   return (
     <>
-      <h1>User details</h1>
-      {userdata}
+      <h1>Pending Tasks</h1>
+      <ul>{taskList}</ul>
     </>
   );
 };

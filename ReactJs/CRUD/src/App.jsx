@@ -3,22 +3,13 @@ import Create from "./components/Create";
 import Read from "./components/Read";
 
 const App = () => {
-  const [users, setUsers] = useState([
-    {
-      name: "Ali",
-      age: 27,
-    },
-    {
-      name: "John",
-      age: 30,
-    },
-  ]);
+  const [task, setTask] = useState([]);
 
   return (
     <>
-      <Create />
+      <Create task={task} setTask={setTask} />
       <hr />
-      <Read username={users} setUsers={setUsers} />
+      <Read task={task} setTask={setTask} />
     </>
   );
 };

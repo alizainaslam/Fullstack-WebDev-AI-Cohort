@@ -1,31 +1,34 @@
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
 const Create = (props) => {
-  const [username, setUsername] = useState("");
-  const [userage, setUserage] = useState("");
+  const setTask = props.setTask;
+  
+  const [title, setTitle] = useState("");
 
   const submitHandler = (ev) => {
     ev.preventDefault();
-    const newuser = { username, userage };
-    console.log(newuser);
+    let newTask = {
+      id: nanoid(),
+      title,
+      isCompleted: false,
+    };
+    setTask((prev) => [...prev, newTask]);
+    setTitle("");
   };
+
   return (
     <>
-      <h1>Add new user</h1>
+      <h1>To do</h1>
       <form onSubmit={submitHandler}>
         <input
           type="text"
-          placeholder="username"
-          onChange={(ev) => setUsername(ev.target.value)}
-          value={username}
+          placeholder="title"
+          required
+          onChange={(ev) => setTitle(ev.target.value)}
+          value={title}
         />
-        <input
-          type="number"
-          placeholder="userage"
-          onChange={(ev) => setUserage(ev.target.value)}
-          value={userage}
-        />
-        <button>Submit</button>
+        <button>+</button>
       </form>
     </>
   );
