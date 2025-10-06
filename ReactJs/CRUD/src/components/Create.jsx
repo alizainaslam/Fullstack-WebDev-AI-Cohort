@@ -13,7 +13,7 @@ const Create = (props) => {
       title: data.title,
       isCompleted: false,
     };
-    toast.success("New todo has been created!");
+    toast.success("Todo created successfully.");
     setTask([...task, newTask]);
     reset();
   };

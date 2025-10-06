@@ -6,7 +6,7 @@ const Read = (props) => {
 
   const deleteHandler = (id) => {
     setTask(task.filter((task) => task.id != id));
-    toast.warn("Todo has been deleted!");
+    toast.warn("Todo deleted successfully.");
   };
 
   const taskList = task.map((task) => (
