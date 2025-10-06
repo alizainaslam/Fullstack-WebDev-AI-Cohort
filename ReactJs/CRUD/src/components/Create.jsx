@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
 import { toast } from "react-toastify";
+import { todoContext } from "../context/Wrapper";
+import { useContext } from "react";
 
-const Create = (props) => {
-  const setTask = props.setTask;
-  const task = props.task;
+const Create = () => {
+  const { task, setTask } = useContext(todoContext);
+
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
