@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Create from "./components/Create";
 import Read from "./components/Read";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [task, setTask] = useState([]);
@@ -11,6 +12,7 @@ const App = () => {
         <Create task={task} setTask={setTask} />
         <Read task={task} setTask={setTask} />
       </div>
+      <ToastContainer position="top-center" autoClose={1000} />
     </div>
   );
 };

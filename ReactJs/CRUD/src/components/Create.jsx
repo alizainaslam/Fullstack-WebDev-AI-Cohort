@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
+import { toast } from "react-toastify";
 
 const Create = (props) => {
   const setTask = props.setTask;
@@ -12,6 +13,7 @@ const Create = (props) => {
       title: data.title,
       isCompleted: false,
     };
+    toast.success("New todo has been created!");
     setTask([...task, newTask]);
     reset();
   };
