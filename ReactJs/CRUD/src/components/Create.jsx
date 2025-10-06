@@ -1,35 +1,33 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
 
 const Create = (props) => {
   const setTask = props.setTask;
+  const task = props.task;
+  const { register, handleSubmit, reset } = useForm();
 
-  const [title, setTitle] = useState("");
-
-  const submitHandler = (ev) => {
-    ev.preventDefault();
+  const onSubmit = (data) => {
     let newTask = {
       id: nanoid(),
-      title,
+      title: data.title,
       isCompleted: false,
     };
-    setTask((prev) => [...prev, newTask]);
-    setTitle("");
+    setTask([...task, newTask]);
+    reset();
   };
 
   return (
     <div className="md:w-[50%]">
       <h1 className="text-5xl font-semibold leading-14 mb-4">To Do</h1>
       <form
-        onSubmit={submitHandler}
+        onSubmit={handleSubmit(onSubmit)}
         className="flex w-full justify-between border-b-1 pb-[1px]"
       >
         <input
           type="text"
           placeholder="Add todo"
           required
-          onChange={(ev) => setTitle(ev.target.value)}
-          value={title}
+          {...register("title")}
           className="border-none outline-0 w-[90%]"
         />
         <button className="hover:cursor-pointer">+</button>
