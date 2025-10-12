@@ -7,10 +7,6 @@ const Nav = () => {
       name: "Home",
     },
     {
-      to: "/about",
-      name: "About",
-    },
-    {
       to: "/recipes",
       name: "Recipes",
     },
@@ -28,7 +24,7 @@ const Nav = () => {
         className={({ isActive }) =>
           `${isActive ? "text-red-400" : null} ${
             link.to === "/create-recipe"
-              ? "bg-[#0b0b13] px-3 py-2 rounded"
+              ? "bg-white text-zinc-900 px-3 py-2 rounded"
               : null
           }`
         }
@@ -38,7 +34,7 @@ const Nav = () => {
     );
   });
   return (
-    <nav className="flex py-6 px-[10%] justify-center items-center gap-10 bg-zinc-900 mb-5">
+    <nav className="flex py-6 px-[10%] justify-center items-center gap-10 bg-zinc-900 text-white mb-5">
       {route}
     </nav>
   );
