@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import Input from "../components/Input";
+
 const CreateRecipe = () => {
   const { register, handleSubmit, reset } = useForm();
 
@@ -16,41 +18,23 @@ const CreateRecipe = () => {
         className="bg-zinc-900 rounded p-4 flex flex-col gap-6"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <input
-          type="url"
-          required
-          {...register("image")}
-          placeholder="image-url"
-          className="outline-0 border-b w-full px-0.5 pb-1.5"
-        />
-        <input
+        <Input type="url" placeholder="image" {...register("image-url")} />
+
+        <Input type="text" placeholder="title" {...register("title")} />
+
+        <Input
           type="text"
-          required
-          {...register("title")}
-          placeholder="title"
-          className="outline-0 border-b w-full px-0.5 pb-1.5"
-        />
-        <input
-          type="text"
-          required
-          {...register("description")}
           placeholder="description"
-          className="outline-0 border-b w-full px-0.5 pb-1.5"
+          {...register("description")}
         />
-        <input
+
+        <Input
           type="text"
-          required
-          {...register("ingredients")}
           placeholder="ingredients"
-          className="outline-0 border-b w-full px-0.5 pb-1.5"
+          {...register("ingredients")}
         />
-        <input
-          type="text"
-          required
-          {...register("chef")}
-          placeholder="chef-name"
-          className="outline-0 border-b w-full px-0.5 pb-1.5"
-        />
+
+        <Input type="text" placeholder="chef-name" {...register("chef")} />
 
         <select
           className="bg-zinc-900"
