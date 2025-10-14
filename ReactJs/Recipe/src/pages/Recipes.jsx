@@ -14,7 +14,7 @@ const Recipes = () => {
         title={recipe.title}
         chef={recipe.chef}
         ingredients={recipe.ingredients}
-        decription={recipe.decription}
+        description={recipe.description}
       />
     );
   });

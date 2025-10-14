@@ -16,9 +16,9 @@ const CreateRecipe = () => {
   const submitHandler = (input) => {
     let newRecipe = {
       id: nanoid(),
-      iamge: input.imageurl,
+      image: input.image,
       title: input.title,
-      decription: input.description,
+      description: input.description,
       ingredients: input.ingredients,
       chef: input.chef,
       category: input.category,
@@ -37,7 +37,7 @@ const CreateRecipe = () => {
         className="bg-white rounded p-4 flex flex-col gap-6"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <Input type="url" placeholder="image" {...register("imageurl")} />
+        <Input type="url" placeholder="image" {...register("image")} />
 
         <Input type="text" placeholder="title" {...register("title")} />
 

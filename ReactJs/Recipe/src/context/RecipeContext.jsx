@@ -8,8 +8,8 @@ const RecipeContext = (props) => {
       id: 1,
       title: "Classic Pizza",
       ingredients: "Pizza dough Salt and pepper to taste",
-      decription:
-        "Preheat the oven to 475°F (245°C). Roll out the pizza dough and spread tomato sauce evenly Top with slices of fresh mozzarella and fresh basil leaves.",
+      description:
+        "Preheat the oven to 475°F (245°C). Roll out the pizza dough and spread tomato sauce evenly Top with slices of fresh mozzarella and fresh basil leaves. Pasta and many more dummy data.",
       cuisine: "Italian",
       image: "https://cdn.dummyjson.com/recipe-images/1.webp",
       chef: "John",
@@ -18,7 +18,7 @@ const RecipeContext = (props) => {
       id: 2,
       title: "Classic Margherita Pizza",
       ingredients: "Pizza dough Salt and pepper to taste",
-      decription:
+      description:
         "Preheat the oven to 475°F (245°C). Roll out the pizza dough and spread tomato sauce evenly Top with slices of fresh mozzarella and fresh basil leaves.",
       cuisine: "Italian",
       image: "https://cdn.dummyjson.com/recipe-images/1.webp",

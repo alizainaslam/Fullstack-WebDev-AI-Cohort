@@ -15,8 +15,12 @@ const RecipeCard = (props) => {
       <h3 className="font-thin uppercase text-zinc-950">{props.chef}</h3>
       <small>{props.ingredients}</small>
       <p className="leading-snug">
-        {props.decription.slice(0, 116)}
-        <small className="text-blue-500">See more...</small>
+        {props.description
+          ? props.description.length > 120
+            ? props.description.slice(0, 120)
+            : props.description
+          : ""}
+        <small className="text-blue-500"> See more...</small>
       </p>
     </NavLink>
   );
