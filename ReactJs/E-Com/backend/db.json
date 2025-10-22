@@ -1,0 +1,25 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "Sincere@april.biz",
+            "phone": "1-770-736-8031 x56442",
+            "website": "hildegard.org"
+        }
+    ],
+    "products": [
+        {
+            "id": "1",
+            "text": "a comment about post 1",
+            "postId": "1"
+        },
+        {
+            "id": "2",
+            "text": "another comment about post 1",
+            "postId": "1"
+        }
+    ],
+    "cart": []
+}
