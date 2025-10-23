@@ -1,9 +1,10 @@
 import axios from "../../utils/axiosConfig";
+import { loadUser } from "./userSlice";
 
-const asyncGetUser = async () => {
+const asyncGetUser = () => async (dispatch, getState) => {
   try {
-    const user = await axios.get("/user");
-    console.log(user);
+    const { data } = await axios.get("/user");
+    dispatch(loadUser(data));
   } catch (error) {
     console.log(error);
   }
