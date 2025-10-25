@@ -1,25 +1,66 @@
 {
-    "user": [
-        {
-            "id": 1,
-            "name": "Leanne Graham",
-            "username": "Bret",
-            "email": "Sincere@april.biz",
-            "phone": "1-770-736-8031 x56442",
-            "website": "hildegard.org"
-        }
-    ],
-    "products": [
-        {
-            "id": "1",
-            "text": "a comment about post 1",
-            "postId": "1"
-        },
-        {
-            "id": "2",
-            "text": "another comment about post 1",
-            "postId": "1"
-        }
-    ],
-    "cart": []
+  "users": [
+    {
+      "id": "CcbxhxHPiIKi1Xv_BU0Sm",
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin",
+      "isAdmin": true
+    },
+    {
+      "id": "IilCF5pcrPal-93B82l0H",
+      "username": "abc",
+      "email": "abc@f",
+      "password": "adc",
+      "isAdmin": false
+    },
+    {
+      "id": "yMELg4PBaunqPw0hhQLtd",
+      "username": "aliz",
+      "email": "ali@gmail.com",
+      "password": "12345",
+      "isAdmin": false
+    },
+    {
+      "id": "Y_Vb8ozgk_TsrlwSOHRZy",
+      "username": "shani",
+      "email": "ahani@gmail.com",
+      "password": "shani",
+      "isAdmin": false
+    },
+    {
+      "id": "vHhyG4ydZ1kdhRNo2vYx2",
+      "username": "doe",
+      "email": "doe@mail.com",
+      "password": "doe",
+      "isAdmin": false
+    },
+    {
+      "id": "PrKg_9sCfEJ_K2ZAee2wx",
+      "username": "hsn",
+      "email": "hsn@mail",
+      "password": "hsn",
+      "isAdmin": false
+    },
+    {
+      "id": "IE6v2ZbdFk5gMHlvi-Mmd",
+      "username": "edw",
+      "email": "ali@gmail.com",
+      "password": "wqs",
+      "isAdmin": false
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "cart": []
 }
