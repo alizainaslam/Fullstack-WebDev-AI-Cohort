@@ -8,58 +8,69 @@
       "isAdmin": true
     },
     {
-      "id": "IilCF5pcrPal-93B82l0H",
-      "username": "abc",
-      "email": "abc@f",
-      "password": "adc",
-      "isAdmin": false
-    },
-    {
       "id": "yMELg4PBaunqPw0hhQLtd",
       "username": "aliz",
       "email": "ali@gmail.com",
       "password": "12345",
       "isAdmin": false
-    },
-    {
-      "id": "Y_Vb8ozgk_TsrlwSOHRZy",
-      "username": "shani",
-      "email": "ahani@gmail.com",
-      "password": "shani",
-      "isAdmin": false
-    },
-    {
-      "id": "vHhyG4ydZ1kdhRNo2vYx2",
-      "username": "doe",
-      "email": "doe@mail.com",
-      "password": "doe",
-      "isAdmin": false
-    },
-    {
-      "id": "PrKg_9sCfEJ_K2ZAee2wx",
-      "username": "hsn",
-      "email": "hsn@mail",
-      "password": "hsn",
-      "isAdmin": false
-    },
-    {
-      "id": "IE6v2ZbdFk5gMHlvi-Mmd",
-      "username": "edw",
-      "email": "ali@gmail.com",
-      "password": "wqs",
-      "isAdmin": false
     }
   ],
   "products": [
     {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1509762774605-f07235a08f1f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja3BhY2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday.",
+      "category": "men's clothing"
     },
     {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
+      "id": 2,
+      "image": "https://images.unsplash.com/photo-1499803270242-467f7311582d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFja3BhY2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "North Ridge Expedition Backpack, 45L Capacity",
+      "price": 129.99,
+      "description": "Built for adventure — water-resistant, ultra-durable, and designed for long treks. Includes multiple compartments, laptop sleeve, and ergonomic padding for comfort.",
+      "category": "outdoor gear"
+    },
+    {
+      "id": "xNSKj6VM5W5z7M1v9Rhjv",
+      "image": "https://images.unsplash.com/photo-1760164142066-1ac379c057f5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=700",
+      "title": "new prodcust",
+      "price": "7890",
+      "description": "",
+      "category": "man"
+    },
+    {
+      "id": "sznBBIpwRtHXMDyksHq2r",
+      "image": "https://images.unsplash.com/photo-1760164142066-1ac379c057f5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=700a",
+      "title": "543e",
+      "price": "342",
+      "description": "",
+      "category": "4323"
+    },
+    {
+      "id": "RkjUt6hcRsOKV0MDSC9aK",
+      "image": "https://images.unsplash.com/photo-1760164142066-1ac379c057f5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=700a",
+      "title": "new product",
+      "price": "789",
+      "description": "",
+      "category": "abc"
+    },
+    {
+      "id": "E6d0rKIrJ-KxXWFhT1vZ2",
+      "image": "https://images.unsplash.com/photo-1761198047035-577c8a197375?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500",
+      "title": "new product ",
+      "price": "120",
+      "description": "",
+      "category": "ai"
+    },
+    {
+      "id": "WmjBQmPPLhSuxEjdinlqG",
+      "image": "https://images.unsplash.com/photo-1761198047035-577c8a197375?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500",
+      "title": "8o78i6",
+      "price": "97865",
+      "description": "",
+      "category": "8o76iu"
     }
   ],
   "cart": []

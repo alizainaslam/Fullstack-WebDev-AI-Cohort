@@ -4,6 +4,8 @@ import Products from "../pages/Products";
 import Login from "../pages/Login";
 import PageNotFound from "../pages/PageNotFound";
 import Signup from "../pages/Signup";
+import CreateProduct from "../pages/CRUD/CreateProduct";
+import ProductDetails from "../pages/ProductDetails";
 
 const MainRoutes = () => {
   return (
@@ -12,6 +14,11 @@ const MainRoutes = () => {
       <Route path="/products" element={<Products />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/create-product" element={<CreateProduct />} />
+      <Route
+        path="/products/product-details/:id"
+        element={<ProductDetails />}
+      />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

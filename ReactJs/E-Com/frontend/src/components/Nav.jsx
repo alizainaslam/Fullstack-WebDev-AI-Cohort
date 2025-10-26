@@ -1,6 +1,10 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
+  const user = useSelector((state) => state.userReducer.users);
+
   const isActiveLink = ({ isActive }) => {
     return isActive ? "opacity-80" : "";
   };
@@ -12,9 +16,15 @@ const Nav = () => {
       <NavLink to="/products" className={isActiveLink}>
         Products
       </NavLink>
-      <NavLink to="/login" className={isActiveLink}>
-        Log in
-      </NavLink>
+      {user ? (
+        <NavLink to="/create-product" className={isActiveLink}>
+          Create Product
+        </NavLink>
+      ) : (
+        <NavLink to="/login" className={isActiveLink}>
+          Log in
+        </NavLink>
+      )}
     </nav>
   );
 };

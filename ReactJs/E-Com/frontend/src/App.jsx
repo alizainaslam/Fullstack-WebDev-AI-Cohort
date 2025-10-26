@@ -1,20 +1,17 @@
 import { useEffect } from "react";
 import Nav from "./components/Nav";
 import MainRoutes from "./routes/MainRoutes";
-import { useDispatch, useSelector } from "react-redux";
-import { aasyncCurrentUser } from "./store/actions/auth";
+import { useDispatch } from "react-redux";
+import { asyncCurrentUser } from "./store/actions/auth";
+import { asynceLoadProducts } from "./store/actions/prodcutsActions";
 
 const App = () => {
-  const user = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(aasyncCurrentUser());
+    dispatch(asyncCurrentUser());
+    dispatch(asynceLoadProducts());
   }, []);
-
-  useEffect(() => {
-    console.log("Current User:", user);
-  }, [user]);
 
   return (
     <>
