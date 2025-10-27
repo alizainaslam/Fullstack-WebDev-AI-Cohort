@@ -1,8 +1,12 @@
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import { asynceDeleteProducts } from "../store/actions/prodcutsActions";
+
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const product = useSelector((state) => state.productReducer.products);
   const getProduct = product && product.find((prod) => prod.id == id);
 
@@ -22,7 +26,26 @@ const ProductDetails = () => {
     </div>
   );
 
-  return <div>{productDetail}</div>;
+  const deleteHandler = () => {
+    dispatch(asynceDeleteProducts(id));
+    navigate("/products");
+  };
+  return (
+    <div>
+      {productDetail}
+      <div className="flex mt-10 gap-10">
+        <button className="py-2 px-3 bg-blue-500 text-white rounded">
+          Update Product
+        </button>
+        <button
+          onClick={deleteHandler}
+          className="py-2 px-3 bg-red-500 text-white rounded"
+        >
+          Delete Product
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default ProductDetails;

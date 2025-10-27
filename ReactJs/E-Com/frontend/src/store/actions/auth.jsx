@@ -1,4 +1,4 @@
-import { loadUser } from "../reducers/userSlice";
+import { loadUser, logoutuser } from "../reducers/userSlice";
 import axios from "../../utils/axiosConfig";
 
 export const asyncCurrentUser = () => async (dispatch) => {
@@ -11,9 +11,10 @@ export const asyncCurrentUser = () => async (dispatch) => {
   }
 };
 
-export const asyncLogout = () => async () => {
+export const asyncLogout = () => async (dispatch) => {
   try {
     localStorage.removeItem("user");
+    dispatch(logoutuser());
   } catch (error) {
     console.error(error);
   }
