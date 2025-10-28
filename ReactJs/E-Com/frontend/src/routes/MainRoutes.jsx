@@ -6,6 +6,7 @@ import PageNotFound from "../pages/PageNotFound";
 import Signup from "../pages/Signup";
 import CreateProduct from "../pages/CRUD/CreateProduct";
 import ProductDetails from "../pages/ProductDetails";
+import UserSetting from "../pages/UserSetting";
 
 const MainRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const MainRoutes = () => {
         path="/products/product-details/:id"
         element={<ProductDetails />}
       />
+      <Route path="/user-setting" element={<UserSetting />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

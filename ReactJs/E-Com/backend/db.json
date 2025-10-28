@@ -17,20 +17,68 @@
   ],
   "products": [
     {
-      "id": "xNSKj6VM5W5z7M1v9Rhjv",
-      "image": "https://images.unsplash.com/photo-1760164142066-1ac379c057f5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=700",
-      "title": "new prodcust",
-      "price": "7890",
-      "description": "",
-      "category": "man"
+      "id": "E6d0rKIrJ-KxXWFhT1vZ2",
+      "image": "https://images.unsplash.com/photo-1761198047035-577c8a197375?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      "title": "AI Smart Speaker",
+      "price": "130",
+      "description": "Voice-controlled smart speaker powered by next-gen AI for your home.",
+      "category": "ai"
     },
     {
-      "id": "E6d0rKIrJ-KxXWFhT1vZ2",
-      "image": "https://images.unsplash.com/photo-1761198047035-577c8a197375?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500",
-      "title": "new product ",
-      "price": "120",
-      "description": "",
+      "id": "P9d1rKJsD-KxXWFhT1vZ3",
+      "image": "https://images.unsplash.com/photo-1761538087574-41254b89f252?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "Wireless Headphones",
+      "price": "89",
+      "description": "Noise-cancelling over-ear headphones with immersive sound quality.",
+      "category": "electronics"
+    },
+    {
+      "id": "A2d9rLQrB-KxXWFhT1vZ4",
+      "image": "https://plus.unsplash.com/premium_photo-1761393925130-a49769ed9bfe?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "Minimalist Wrist Watch",
+      "price": "75",
+      "description": "Stylish wristwatch with a sleek minimalist design and durable build.",
+      "category": "fashion"
+    },
+    {
+      "id": "D4x8rMNrH-KxXWFhT1vZ5",
+      "image": "https://images.unsplash.com/photo-1761058239739-0ea9586d67a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIyfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "Ergonomic Office Chair",
+      "price": "210",
+      "description": "Adjustable office chair designed for long working hours and comfort.",
+      "category": "furniture"
+    },
+    {
+      "id": "T9k1rBNpG-KxXWFhT1vZ6",
+      "image": "https://plus.unsplash.com/premium_photo-1732449779165-5527653fe4c7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=7000",
+      "title": "Smart Fitness Band chnage",
+      "price": "60",
+      "description": "Track your fitness goals with accurate heart rate and sleep monitoring.",
+      "category": "wearables"
+    },
+    {
+      "id": "Y1z7rCKpJ-KxXWFhT1vZ7",
+      "image": "https://images.unsplash.com/photo-1761212534376-a8b8d7c56669?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Q0R3dXdYSkFiRXd8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "AI Drone Camera",
+      "price": "499",
+      "description": "Compact drone with AI stabilization and 4K camera for stunning aerial shots.",
       "category": "ai"
+    },
+    {
+      "id": "Q2j9rFNrJ-KxXWFhT1vZ8",
+      "image": "https://plus.unsplash.com/premium_photo-1757782323237-cc11aab3ccc0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Q0R3dXdYSkFiRXd8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "Eco-friendly Water Bottle",
+      "price": "25",
+      "description": "Reusable stainless-steel bottle designed to keep your drinks cool or warm.",
+      "category": "lifestyle"
+    },
+    {
+      "id": "K8d2rLMrE-KxXWFhT1vZ9",
+      "image": "https://images.unsplash.com/photo-1761554845799-6aa2ef090925?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8Q0R3dXdYSkFiRXd8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=700",
+      "title": "Portable Bluetooth Speaker",
+      "price": "45",
+      "description": "Compact Bluetooth speaker with crystal-clear sound and deep bass.",
+      "category": "electronics"
     }
   ],
   "cart": []

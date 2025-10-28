@@ -20,7 +20,7 @@ export const asyncLogout = () => async (dispatch) => {
   }
 };
 
-export const asyncLogin = (user) => async () => {
+export const asyncLogin = (user) => async (dispatch) => {
   try {
     const { data } = await axios.get(
       `/users?username=${user.username}&password=${user.password}`
@@ -28,6 +28,7 @@ export const asyncLogin = (user) => async () => {
 
     if (data.length > 0) {
       localStorage.setItem("user", JSON.stringify(data[0]));
+      dispatch(asyncCurrentUser());
     } else console.log("User not found!");
   } catch (error) {
     console.error(error);

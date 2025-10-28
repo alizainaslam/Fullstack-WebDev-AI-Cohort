@@ -1,20 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
-import { asyncLogout } from "../store/actions/auth";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const user = useSelector((state) => state.userReducer.users);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+
 
   const isActiveLink = ({ isActive }) => {
     return isActive ? "opacity-80" : "";
   };
 
-  const logoutHandler = () => {
-    dispatch(asyncLogout());
-    navigate("/");
-  };
+ 
 
   return (
     <nav className="flex gap-x-10 justify-center mb-4 py-3 bg-white shadow-xs">
@@ -26,10 +21,12 @@ const Nav = () => {
       </NavLink>
       {user ? (
         <>
-          <NavLink to="/create-product" className={isActiveLink}>
-            Create Product
-          </NavLink>
-          <button onClick={logoutHandler}>Log out</button>
+          {user?.isAdmin && (
+            <NavLink to="/create-product" className={isActiveLink}>
+              Create Product
+            </NavLink>
+          )}
+          <NavLink to="/user-setting">Settings</NavLink>
         </>
       ) : (
         <NavLink to="/login" className={isActiveLink}>
