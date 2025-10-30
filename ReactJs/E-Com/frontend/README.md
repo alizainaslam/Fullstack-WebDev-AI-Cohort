@@ -1,16 +1,37 @@
-# React + Vite
+# Cohort Redux lecutre 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# This project is a full-stack understand flow application that includes both frontend and backend components.
 
-Currently, two official plugins are available:
+# Frontend Code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# The frontend is built using React and can be found in the `frontend` directory.
 
-## React Compiler
+# Make sure you have all the dependencies installed by running:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# npm install
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# To run the frontend, navigate to the frontend directory and use the following command:
+
+# npm start
+
+# This will start the frontend server and you can access the application in your web browser.
+
+
+# Backend Code
+
+# The backend is built using json-server and can be found in the `backend` directory.
+
+# Make sure you have all the dependencies installed by running:
+
+# npm install
+
+# This will install all the necessary packages defined in package.json.
+
+# To run the backend, navigate to the backend directory and use the following command:
+
+# npx json-server db.json
+
+# This will start the backend server and you can access the API endpoints at
+
+# http://localhost:3000 -> /products and /users

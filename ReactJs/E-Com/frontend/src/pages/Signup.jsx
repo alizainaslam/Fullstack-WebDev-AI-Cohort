@@ -12,8 +12,9 @@ const Signup = () => {
   const signupHandler = (userdetails) => {
     const id = nanoid();
     const isAdmin = false;
+    const cart = [];
     const { username, email, password } = userdetails;
-    const user = { id, username, email, password, isAdmin };
+    const user = { id, username, email, password, isAdmin, cart };
     dispatch(asyncSignup(user));
     setTimeout(() => {
       navigate("/login");

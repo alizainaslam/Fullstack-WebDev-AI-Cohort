@@ -42,3 +42,12 @@ export const asyncSignup = (user) => async () => {
     console.error(error);
   }
 };
+
+export const asyncUpdateUser = (user, cartItem) => async (dispatch) => {
+  try {
+    await axios.patch(`/users/${user}`, { cart: cartItem });
+    dispatch(asyncCurrentUser());
+  } catch (error) {
+    console.error(error);
+  }
+};

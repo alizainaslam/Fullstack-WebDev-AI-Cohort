@@ -14,7 +14,7 @@ const Products = () => {
         return (
           <div
             key={product.id}
-            className="flex flex-col h-[500px] w-full gap-2 md:w-[300px] bg-white p-3 rounded"
+            className="flex flex-col h-fit w-full gap-2 md:w-[300px] bg-white p-3 rounded"
           >
             <img
               src={product.image}

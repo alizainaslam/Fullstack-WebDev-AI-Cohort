@@ -5,7 +5,7 @@ import {
   asynceUpdateProducts,
 } from "../store/actions/prodcutsActions";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
+import { asyncUpdateUser } from "../store/actions/auth";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -16,8 +16,22 @@ const ProductDetails = () => {
 
   const getProduct = product && product.find((prod) => prod.id == id);
 
+  const addtoCardHandler = (id) => {
+    console.log(user);
+    const copyUser = { ...user, cart: [...user.cart] };
+
+    const index = copyUser.cart.findIndex((item) => item.id === id);
+
+    if (index === -1) {
+      copyUser.cart.push({ id: id, quantity: 1 });
+    } else {
+      console.log(index);
+    }
+    dispatch(asyncUpdateUser(user.id, [...user.cart, copyUser.cart]));
+  };
+
   const productDetail = getProduct && (
-    <div className="flex flex-col gap-2 md:w-[400px] bg-white p-3 rounded">
+    <div className="flex flex-col gap-2 md:w-[400px] bg-white p-3 rounded h-fit">
       <img
         src={getProduct.image}
         alt="getProduct? image"
@@ -28,6 +42,14 @@ const ProductDetails = () => {
       <p>{getProduct.description}</p>
       <div className="flex justify-between items-center">
         <small>{getProduct.category}</small>
+        {user && !user?.isAdmin && (
+          <button
+            className="cursor-pointer py-1 px-2 bg-gray-600 rounded text-white"
+            onClick={() => addtoCardHandler(getProduct.id)}
+          >
+            Add to cart
+          </button>
+        )}
       </div>
     </div>
   );
@@ -52,9 +74,9 @@ const ProductDetails = () => {
   };
 
   return (
-    <div>
+    <div className="lg:flex w-full">
       {productDetail}
-      <div className="flex mt-10 gap-10 flex-col lg:flex-row">
+      <div className="flex mt-10 gap-10 flex-col w-full items-center">
         {user && user?.isAdmin && (
           <>
             <form
@@ -101,7 +123,7 @@ const ProductDetails = () => {
             </form>
             <button
               onClick={deleteHandler}
-              className="py-2 px-3 bg-red-500 text-white rounded h-fit"
+              className="py-2 px-3 bg-red-500 text-center text-white rounded w-fit h-fit"
             >
               Delete Product
             </button>

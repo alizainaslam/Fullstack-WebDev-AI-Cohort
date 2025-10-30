@@ -5,14 +5,23 @@
       "username": "admin",
       "email": "admin@example.com",
       "password": "admin",
-      "isAdmin": true
+      "isAdmin": true,
+      "cart": []
     },
     {
-      "id": "yMELg4PBaunqPw0hhQLtd",
-      "username": "aliz",
-      "email": "ali@gmail.com",
-      "password": "12345",
-      "isAdmin": false
+      "id": "3Pk7Z_daNUh5igGzFswCp",
+      "username": "newUser",
+      "email": "newUser@mail.com",
+      "password": "newUser",
+      "isAdmin": false,
+      "cart": [
+        [
+          {
+            "id": "E6d0rKIrJ-KxXWFhT1vZ2",
+            "quantity": 1
+          }
+        ]
+      ]
     }
   ],
   "products": [
@@ -73,12 +82,12 @@
       "category": "lifestyle"
     },
     {
-      "id": "K8d2rLMrE-KxXWFhT1vZ9",
-      "image": "https://images.unsplash.com/photo-1761554845799-6aa2ef090925?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8Q0R3dXdYSkFiRXd8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=700",
-      "title": "Portable Bluetooth Speaker",
-      "price": "45",
-      "description": "Compact Bluetooth speaker with crystal-clear sound and deep bass.",
-      "category": "electronics"
+      "id": "S9mVF-gaNMVI74DhjxirN",
+      "image": "https://images.unsplash.com/photo-1760164142066-1ac379c057f5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=800",
+      "title": "new product",
+      "price": "130",
+      "description": "",
+      "category": "test"
     }
   ],
   "cart": []
