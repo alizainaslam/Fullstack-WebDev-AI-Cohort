@@ -4,14 +4,40 @@ const app = express();
 
 app.use(express.json());
 
-const Notes = [];
+let Notes = [];
 
-app.post("/notes", (req, res) => {
-  console.log(req.body);
-  Notes.push(req.body);
-  res.send(Notes);
+app.get("/", (req, res) => {
+  res.send("A nodejs app has been running here!");
 });
 
-app.listen(3000, () => {
-  console.log("Server is running at port 3000");
+app.post("/notes", async (req, res) => {
+  const notes = await req.body;
+  Notes.push(notes);
+  res.json({
+    message: "Note added successfully!",
+  });
+  console.log(Notes);
 });
+
+app.patch("/notes/:index", async (req, res) => {
+  const idx = req.params.index;
+  const { title } = req.body;
+  Notes[idx].title = title;
+  res.json({
+    message: "Note updated successfully!",
+  });
+
+  console.log(Notes);
+});
+
+app.delete("/notes/:index", async (req, res) => {
+  const index = req.params.index;
+  delete Notes[index];
+
+  res.json({
+    message: "Note has been deleted successfully.",
+  });
+  console.log(Notes);
+});
+
+app.listen(3000);
