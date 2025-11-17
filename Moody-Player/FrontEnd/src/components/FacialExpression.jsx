@@ -22,45 +22,46 @@ const FacialExpression = () => {
       .catch((err) => console.log("Camera error: ", err));
   };
 
-  const onPlay = () => {
-    setInterval(async () => {
-      if (!videoRef.current) return;
+  const onPlay = async () => {
+    if (!videoRef.current) return;
 
-      const detections = await faceapi
-        .detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions())
-        .withFaceExpressions();
+    const detections = await faceapi
+      .detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions())
+      .withFaceExpressions();
 
-      if (detections.length === 0 || !detections[0].expressions) {
-        console.log("Something went wrong!");
-        return;
+    if (detections.length === 0 || !detections[0].expressions) {
+      console.log("Something went wrong!");
+      return;
+    }
+
+    const expression = detections[0]?.expressions;
+    let _maxExpression = 0;
+    let _dominate = "";
+    for (let key in expression) {
+      if (expression[key] > _maxExpression) {
+        _maxExpression = expression[key];
+        _dominate = key;
       }
-
-      const expression = detections[0]?.expressions;
-      let _maxExpression = 0;
-      let _dominate = "";
-      for (let key in expression) {
-        if (expression[key] > _maxExpression) {
-          _maxExpression = expression[key];
-          _dominate = key;
-        }
-      }
-      console.log(_dominate);
-    }, 5000);
+    }
+    console.log(_dominate);
   };
 
   return (
-    <>
-      <h1>Moody Player</h1>
+    <div className="py-16 flex flex-col w-full justify-center items-center lg:flex-row gap-10">
       <video
         ref={videoRef}
         autoPlay
         muted
-        width="320"
-        height="420"
         onPlay={onPlay}
+        className="w-[380px] h-[250px] object-cover rounded-lg"
       />
-      <button onClick={laodModels}>Detact Mood</button>
-    </>
+      <button
+        onClick={laodModels}
+        className="bg-gray-900 text-white px-4 py-3 rounded-lg cursor-pointer"
+      >
+        Detact Mood
+      </button>
+    </div>
   );
 };
 
