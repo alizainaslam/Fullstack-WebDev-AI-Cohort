@@ -1,20 +1,22 @@
+import play from "/play.svg";
+
 const Songs = () => {
   const songList = [
     {
       name: "song_name",
-      artist: "sone_artist",
+      artist: "song_artist",
     },
     {
       name: "song_name",
-      artist: "sone_artist",
+      artist: "song_artist",
     },
     {
       name: "song_name",
-      artist: "sone_artist",
+      artist: "song_artist",
     },
     {
       name: "song_name",
-      artist: "sone_artist",
+      artist: "song_artist",
     },
   ];
 
@@ -23,12 +25,19 @@ const Songs = () => {
       <h1 className="text-2xl font-semibold pb-4">Recommended</h1>
       {songList.map((song, idx) => {
         return (
-          <ol key={idx} className="w-full flex justify-between items-center my-3">
+          <ol
+            key={idx}
+            className="w-full flex justify-between items-center my-3"
+          >
             <div>
-              <h2>{song.name}</h2>
+              <h2 className="text-lg font-semibold">{song.name}</h2>
               <small>{song.artist}</small>
             </div>
-            <h2>icon</h2>
+            <img
+              src={play}
+              alt="play-icon"
+              className="h-5 w-5 cursor-pointer"
+            />
           </ol>
         );
       })}
