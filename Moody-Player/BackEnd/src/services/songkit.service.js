@@ -11,7 +11,8 @@ const uploadFile = async (file) => {
   try {
     const res = await imagekit.upload({
       file: file.buffer,
-      fileName: file.originalname || "uploaded-audio",
+      fileName: Math.random().toString(36).substring(2, 10),
+      folder: "Moody-player",
     });
     return res;
   } catch (error) {

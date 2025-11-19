@@ -1,8 +1,11 @@
 import * as faceapi from "face-api.js";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
+import { moodContext } from "../context/MoodContext";
 
 const FacialExpression = () => {
   const videoRef = useRef();
+
+  const { setUserMood } = useContext(moodContext);
 
   const laodModels = async () => {
     const MODEL_URL = "/models";
@@ -44,6 +47,7 @@ const FacialExpression = () => {
       }
     }
     console.log(_dominate);
+    setUserMood(_dominate);
   };
 
   return (

@@ -1,29 +1,30 @@
+import { useContext, useState } from "react";
 import play from "/play.svg";
+import instance from "../../api/Apiconfig";
+import { moodContext } from "../../context/MoodContext";
 
 const Songs = () => {
-  const songList = [
-    {
-      name: "song_name",
-      artist: "song_artist",
-    },
-    {
-      name: "song_name",
-      artist: "song_artist",
-    },
-    {
-      name: "song_name",
-      artist: "song_artist",
-    },
-    {
-      name: "song_name",
-      artist: "song_artist",
-    },
-  ];
+  const { userMood } = useContext(moodContext);
+  const [songList, setSongList] = useState([]);
+  const fetchSong = async (mood) => {
+    try {
+      const { data } = await instance.get(`/song?mood=${mood}`);
+      const response = data.findSong[0];
+      setSongList(response);
+      console.log(songList);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  {
+    userMood && fetchSong(userMood);
+  }
 
   return (
     <>
       <h1 className="text-2xl font-semibold pb-4">Recommended</h1>
-      {songList.map((song, idx) => {
+      {/* {songList.map((song, idx) => {
         return (
           <ol
             key={idx}
@@ -40,7 +41,7 @@ const Songs = () => {
             />
           </ol>
         );
-      })}
+      })} */}
     </>
   );
 };
