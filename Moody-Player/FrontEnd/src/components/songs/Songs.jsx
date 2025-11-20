@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import play from "/play.svg";
 import instance from "../../api/Apiconfig";
 import { moodContext } from "../../context/MoodContext";
@@ -6,42 +6,41 @@ import { moodContext } from "../../context/MoodContext";
 const Songs = () => {
   const { userMood } = useContext(moodContext);
   const [songList, setSongList] = useState([]);
+
   const fetchSong = async (mood) => {
     try {
       const { data } = await instance.get(`/song?mood=${mood}`);
-      const response = data.findSong[0];
-      setSongList(response);
-      console.log(songList);
+      setSongList(data.findSong);
     } catch (error) {
       console.log(error);
     }
   };
 
-  {
-    userMood && fetchSong(userMood);
-  }
+  useEffect(() => {
+    {
+      userMood && fetchSong(userMood);
+    }
+  }, [userMood]);
 
   return (
     <>
       <h1 className="text-2xl font-semibold pb-4">Recommended</h1>
-      {/* {songList.map((song, idx) => {
-        return (
+      {songList.length > 0 ? (
+        songList.map((song, idx) => (
           <ol
             key={idx}
-            className="w-full flex justify-between items-center my-3"
+            className="w-full flex flex-col lg:flex-row justify-between lg:items-center my-3 gap-5"
           >
             <div>
-              <h2 className="text-lg font-semibold">{song.name}</h2>
+              <h2 className="text-lg font-semibold">{song.title}</h2>
               <small>{song.artist}</small>
             </div>
-            <img
-              src={play}
-              alt="play-icon"
-              className="h-5 w-5 cursor-pointer"
-            />
+            <audio src={song.audio} controls preload="none" />
           </ol>
-        );
-      })} */}
+        ))
+      ) : (
+        <h3>You don't have any recommended song!</h3>
+      )}
     </>
   );
 };
