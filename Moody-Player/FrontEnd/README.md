@@ -1,16 +1,36 @@
-# React + Vite
+# Course Practice Project / Moody-Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was built as part of a course practice assignment.  
+The main purpose was to understand full-stack application flow, how the frontend and backend communicate, and how data moves between different layers of the stack.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What I Did
 
-## React Compiler
+- Built a simple full-stack application  
+- Created APIs for uploading songs and getting recommended songs  
+- Connected frontend and backend together  
+- Implemented mood selection to fetch songs dynamically  
+- Displayed song list with an audio player  
+- Practiced routing, state management, and API handling  
+- Worked with external services like ImageKit for sound hosting
+- Use Mongoose DB for store song(s) data
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React  
+- Context API  
+- Axios  
+- Tailwind CSS  
+
+### Backend
+- Node.js  
+- Express  
+- MongoDB  
+- ImageKit cloud
+- CORS  
+- dotenv  
+

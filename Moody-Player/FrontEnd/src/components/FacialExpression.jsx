@@ -46,7 +46,6 @@ const FacialExpression = () => {
         _dominate = key;
       }
     }
-    console.log(_dominate);
     setUserMood(_dominate);
   };
 
